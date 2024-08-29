@@ -1,45 +1,194 @@
-/* Reset margins and padding for the body */
-body {
+/* Reset and global styling */
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #f0f8ff, #e6e6e6); /* Light gradient background */
+    color: #333;
+    text-align: center;
+}
+
+/* Header styling */
+header {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    position: relative; /* For positioning child elements */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between logo, title, and nav */
+    padding: 0 10%;
+}
+
+.header-content .logo img {
+    width: 120px;
+    height: auto;
+    border-radius: 50%; /* Rounded logo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Logo shadow */
+}
+
+.site-title {
+    font-size: 36px; /* Adjust size as needed */
+    color: #333;
+    margin: 0;
+    margin-left: -400px; /* Space between logo and title */
     position: relative;
-    height: 10vh;
+    font-weight: 700;
+    letter-spacing: 1px; /* Spacing between letters */
+    text-transform: uppercase;
+    transition: color 0.3s, transform 0.3s;
 }
 
-/* Position the h1 absolutely in the top left corner */
-h1 {
+.site-title::before {
+    content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    margin: 20px;
-    padding: 0;
-}
-
-/* Center the nav menu horizontally */
-nav {
-    position: absolute;
+    left: -10px;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #5a3a1a; /* Accent color */
+    border-radius: 50%;
 }
 
-/* Style the nav and list items */
+nav {
+    margin: 0;
+}
+
 nav ul {
+    display: flex;
     list-style: none;
     padding: 0;
-    margin: 0;
-    display: flex;
+    gap: 20px; /* Space between items */
 }
 
-/* Style each list item */
 nav ul li {
-    margin: 0 15px;
+    position: relative;
 }
 
-/* Style the links */
 nav ul li a {
     text-decoration: none;
-    color: #000;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px 0;
+    transition: color 0.3s, transform 0.3s;
+    border-bottom: 2px solid transparent; /* Underline effect */
+}
+
+nav ul li a:hover {
+    color: #5a3a1a; /* Color on hover */
+    transform: translateY(-3px); /* Lift effect */
+    border-bottom: 2px solid #5a3a1a; /* Underline on hover */
+}
+
+/* Main section styling */
+main {
+    margin-top: 60px; /* Increased margin */
+    padding: 0 10%;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Enhanced text shadow */
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Explore button styling */
+.explore-button {
+    display: inline-block;
+    background: linear-gradient(to right, #5a3a1a, #5a3a1a); /* Gradient background */
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Button shadow */
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.explore-button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.explore-button:hover {
+    background: linear-gradient(to right, #5a3a1a, #5a3a1a); /* Darker gradient on hover */
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Stats section styling */
+.stats {
+    margin-top: 60px;
+}
+
+.stats ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 40px; /* Space between stats */
+}
+
+.stats ul li {
+    font-size: 18px;
+}
+
+.stats ul li span {
+    display: block;
+    font-size: 24px;
     font-weight: bold;
+    color: #5a3a1a; /* Accent color */
+}
+
+/* Footer styling */
+footer {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-top: 60px; /* Increased margin */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .site-title {
+        margin-left: 0;
+        margin-bottom: 10px; /* Space between title and nav */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .explore-button {
+        padding: 10px 20px;
+    }
 }
