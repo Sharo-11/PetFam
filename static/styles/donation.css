@@ -1,45 +1,173 @@
-/* Reset margins and padding for the body */
+/* General styles for the page */
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    background: radial-gradient(circle, #f7f4f0, #e3d4c7);
+    color: #4f3c31;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Header styling */
+header {
+    background-color: #d1b89d;
+    padding: 20px 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     position: relative;
-    height: 10vh;
 }
 
-/* Position the h1 absolutely in the top left corner */
-h1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 20px;
-    padding: 0;
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
 }
 
-/* Center the nav menu horizontally */
 nav {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 0;
 }
 
-/* Style the nav and list items */
 nav ul {
+    display: flex;
     list-style: none;
     padding: 0;
+    gap: 30px;
     margin: 0;
-    display: flex;
 }
 
-/* Style each list item */
 nav ul li {
-    margin: 0 15px;
+    position: relative;
 }
 
-/* Style the links */
 nav ul li a {
     text-decoration: none;
-    color: #000;
-    font-weight: bold;
+    color: #4f3c31;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 0;
+    transition: color 0.3s, transform 0.3s, border-bottom 0.3s;
+    border-bottom: 3px solid transparent;
+    letter-spacing: 0.5px;
+}
+
+nav ul li a:hover {
+    color: #6f4f28;
+    transform: translateY(-3px);
+    border-bottom: 3px solid #6f4f28;
+}
+
+.site-title {
+    font-size: 40px;
+    color: #4f3c31;
+    margin: 0;
+    margin-left: 20px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.3s, transform 0.3s;
+    position: relative;
+}
+
+.site-title::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background: radial-gradient(circle, #6f4f28 50%, transparent 50%);
+    border-radius: 50%;
+}
+
+/* Main content styling */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.donation-intro {
+    margin-bottom: 60px; /* Increased space between heading and rectangles */
+    text-align: center;
+}
+
+.donation-intro h2 {
+    font-size: 36px;
+    color: #6f4f28;
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.donation-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; /* Adjust max-width as needed */
+}
+
+.donation-option {
+    background: #f5e8e0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 280px; /* Adjust the base width */
+    max-width: 280px; /* Adjust the max-width */
+    text-align: center;
+    height: 40vh; /* Adjust height to be shorter */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Center text and button vertically */
+}
+
+.donation-option:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.donation-option h3 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #6f4f28;
+}
+
+.donation-option p {
+    margin: 0;
+    font-size: 16px;
+    color: #4f3c31;
+}
+
+.donate-button {
+    background-color: #6f4f28;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px; /* Add space between text and button */
+}
+
+.donate-button:hover {
+    background-color: #5a3a1a;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #d1b89d;
+    padding: 15px 0;
+    text-align: center;
+    border-top: 1px solid #c1a68a;
+    box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.2);
 }
