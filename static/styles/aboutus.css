@@ -1,4 +1,4 @@
-/* Reset margins and padding for the body */
+
 body {
     margin: 0;
     padding: 0;
@@ -7,7 +7,6 @@ body {
     height: 10vh;
 }
 
-/* Position the h1 absolutely in the top left corner */
 h1 {
     position: absolute;
     top: 0;
@@ -16,7 +15,6 @@ h1 {
     padding: 0;
 }
 
-/* Center the nav menu horizontally */
 nav {
     position: absolute;
     top: 50%;
@@ -24,7 +22,6 @@ nav {
     transform: translate(-50%, -50%);
 }
 
-/* Style the nav and list items */
 nav ul {
     list-style: none;
     padding: 0;
@@ -32,12 +29,10 @@ nav ul {
     display: flex;
 }
 
-/* Style each list item */
 nav ul li {
     margin: 0 15px;
 }
 
-/* Style the links */
 nav ul li a {
     text-decoration: none;
     color: #000;
