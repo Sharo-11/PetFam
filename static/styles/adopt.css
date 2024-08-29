@@ -1,45 +1,52 @@
-/* Reset margins and padding for the body */
+
 body {
-    margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
-    position: relative;
-    height: 10vh;
-}
-
-/* Position the h1 absolutely in the top left corner */
-h1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 20px;
-    padding: 0;
-}
-
-/* Center the nav menu horizontally */
-nav {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* Style the nav and list items */
-nav ul {
-    list-style: none;
-    padding: 0;
+    background-color: #f4f4f4; /* Adjust this to match the theme color scheme */
+    color: #333; /* Adjust this to match text color */
     margin: 0;
-    display: flex;
+    padding: 0;
 }
 
-/* Style each list item */
-nav ul li {
-    margin: 0 15px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* Adjust this to match the box background color */
+    border-radius: 8px; /* Adjust this to match the box shape */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust this to match the 3D effect */
 }
 
-/* Style the links */
-nav ul li a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
+header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee; /* Adjust this to match the border style */
+}
+
+header h1 {
+    margin: 0;
+    color: #007bff; /* Adjust this to match the theme color */
+}
+
+.content {
+    padding: 20px;
+}
+
+.content h2 {
+    color: #333; /* Adjust this to match the theme color */
+    margin-top: 0;
+}
+
+.content p {
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid #eee; /* Adjust this to match the border style */
+}
+
+footer p {
+    margin: 0;
+    color: #666; /* Adjust this to match the text color */
 }
