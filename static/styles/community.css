@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     padding: 0;
@@ -85,10 +86,9 @@ main {
 }
 
 .comments-section {
-    margin: 20px auto; /* Reduced top margin */
-    max-width: 600px; /* Set a max width to make it smaller */
+    margin-top: 40px;
     background: rgba(255, 255, 255, 0.8); 
-    padding: 15px; /* Reduced padding */
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }

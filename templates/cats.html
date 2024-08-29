@@ -1,252 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Cats for Adoption</title>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="../static/styles/cats.css">
-</head>
-<body>
-    <header>
-        <div class="logo">
-            Pet Adoption
-        </div>
-        <nav>
-            <ul>
-                <li><a href="/community">Community</a></li>
-                <li><a href="/donation">Donation</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/about">About Us</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="pet-cards">
-            <!-- Cat Cards Container -->
-            <div id="cat-cards-container">
-                <!-- Bella Siamese Card -->
-                <div class="pet-card">
-                    <img src="../static/images/cat1.png" alt="Bella Siamese">
-                    <div class="pet-info">
-                        <h3>BELLA</h3>
-                        <p>Siamese Cat</p>
-                        <p>2 years old</p>
-                        <p>Distance 3.0km</p>
-                        <div class="pet-details">
-                            <span>Breed: Siamese</span>
-                            <span>Sex: Female</span>
-                            <span>Age: 2 years old</span>
-                            <span>Weight: 8 pounds</span>
-=======
-    <link rel="stylesheet" href="../static/styles/adopt.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Compatibility Form | PetFam</title>
+    <link rel="stylesheet" href="../static/styles/cat.css">
 </head>
 <body>
     <header>
         <div class="header-content">
-            <div class="logo">
-                <img src="../static/images/logo.png" alt="Logo"> 
-            </div>
-            <h1 class="site-title">Cat Adoption</h1>
             <nav>
                 <ul>
-                    <li><a href="/">Home</a></li>
+                    <li><a href="/adopt">Adopt</a></li>
                     <li><a href="/community">Community</a></li>
                     <li><a href="/donation">Donation</a></li>
                     <li><a href="/contact">Contact</a></li>
-                    <li><a href="/about">About Us</a></li>
                 </ul>
             </nav>
+            <h1 class="site-title">PetFam</h1>
         </div>
-    </header>
+    </header>  
     <main>
-        <div class="search-bar">
-            <input type="text" placeholder="Search pet to adopt">
-            <button>Search</button>
-        </div>
-        <div class="pet-categories">
-            <a href="/adopt/dogs"><button class="active">DOGS</button></a>
-            <a href="/adopt/cats"><button>CATS</button></a>
-            <a href="/adopt/parrot"><button>PARROTS</button></a>
-            <a href="/adopt/rabbit"><button>RABBITS</button></a>
-        </div>
-        <div class="pet-cards">
-            <!-- Dog Cards Container -->
-            <div id="dog-cards-container">
-                <!-- Peter Beagle Card -->
-                <div class="pet-card">
-                    <img src="../static/images/cat.png" alt="Peter Beagle">
-                    <div class="pet-info">
-                        <h3>PETER</h3>
-                        <p>Beagle Dog</p>
-                        <p>1.5 years old</p>
-                        <p>Distance 2.5km</p>
-                        <div class="pet-details">
-                            <span>Breed: Beagle</span>
-                            <span>Sex: Male</span>
-                            <span>Age: 1.5 years old</span>
-                            <span>Weight: 20 pounds</span>
->>>>>>> 7b29619a1c1f1e353fa80e6f9121afd553eff0a4
-                            <button class="about-btn">About</button>
-                        </div>
-                        <div class="pet-details-modal">
-                            <div class="pet-details-modal-content">
-<<<<<<< HEAD
-                                <h2>BELLA</h2>
-                                <p>Bella is a gentle and loving Siamese. She enjoys quiet environments and would make a perfect companion for a calm home.</p>
-=======
-                                <h2>PETER</h2>
-                                <p>Peter is super friendly and needs love and attention. He loves to play and will make a great companion for children and does well with cats and other dogs.</p>
->>>>>>> 7b29619a1c1f1e353fa80e6f9121afd553eff0a4
-                                <button>Adoption</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <section class="compatibility-form">
+            <h2>Find Your Perfect Cat</h2>
+            <form action="#" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
 
-<<<<<<< HEAD
-                <!-- Luna Persian Card -->
-                <div class="pet-card">
-                    <img src="../static/images/cat2.png" alt="Luna Persian">
-                    <div class="pet-info">
-                        <h3>LUNA</h3>
-                        <p>Persian Cat</p>
-                        <p>3 years old</p>
-                        <p>Distance 5.0km</p>
-                        <div class="pet-details">
-                            <span>Breed: Persian</span>
-                            <span>Sex: Female</span>
-                            <span>Age: 3 years old</span>
-=======
-                <!-- Carla Indie Card -->
-                <div class="pet-card">
-                    <img src="../static/images/catreal3.png" alt="Carla Indie">
-                    <div class="pet-info">
-                        <h3>CARLA</h3>
-                        <p>Indie Dog</p>
-                        <p>1 year old</p>
-                        <p>Distance 4.5km</p>
-                        <div class="pet-details">
-                            <span>Breed: Indie</span>
-                            <span>Sex: Female</span>
-                            <span>Age: 1 year old</span>
->>>>>>> 7b29619a1c1f1e353fa80e6f9121afd553eff0a4
-                            <span>Weight: 10 pounds</span>
-                            <button class="about-btn">About</button>
-                        </div>
-                        <div class="pet-details-modal">
-                            <div class="pet-details-modal-content">
-<<<<<<< HEAD
-                                <h2>LUNA</h2>
-                                <p>Luna is a sweet and affectionate Persian. She loves attention and enjoys being pampered.</p>
-=======
-                                <h2>CARLA</h2>
-                                <p>Carla is a playful and energetic Indie. She loves to cuddle and is very affectionate, great with children and other pets.</p>
->>>>>>> 7b29619a1c1f1e353fa80e6f9121afd553eff0a4
-                                <button>Adoption</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <label for="living-space">Living Space:</label>
+                <select id="living-space" name="living-space" required>
+                    <option value="apartment">Apartment</option>
+                    <option value="house">House with Yard</option>
+                    <option value="farm">Farm or Large Property</option>
+                </select>
 
-<<<<<<< HEAD
-                <!-- Oliver Maine Coon Card -->
-                <div class="pet-card">
-                    <img src="../static/images/cat3.png" alt="Oliver Maine Coon">
-                    <div class="pet-info">
-                        <h3>OLIVER</h3>
-                        <p>Maine Coon Cat</p>
-                        <p>4 years old</p>
-                        <p>Distance 7.0km</p>
-                        <div class="pet-details">
-                            <span>Breed: Maine Coon</span>
-                            <span>Sex: Male</span>
-                            <span>Age: 4 years old</span>
-                            <span>Weight: 12 pounds</span>
-                            <button class="about-btn">About</button>
-                        </div>
-                        <div class="pet-details-modal">
-                            <div class="pet-details-modal-content">
-                                <h2>OLIVER</h2>
-                                <p>Oliver is a playful and friendly Maine Coon. He gets along well with other pets and enjoys playing with toys.</p>
-                                <button>Adoption</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <label for="activity-level">Activity Level:</label>
+                <select id="activity-level" name="activity-level" required>
+                    <option value="low">Low (e.g., Calm Environment)</option>
+                    <option value="medium">Medium (e.g., Interactive Play)</option>
+                    <option value="high">High (e.g., Frequent Interaction)</option>
+                </select>
 
-                <!-- Chloe British Shorthair Card -->
-                <div class="pet-card">
-                    <img src="../static/images/cat4.png" alt="Chloe British Shorthair">
-                    <div class="pet-info">
-                        <h3>CHLOE</h3>
-                        <p>British Shorthair Cat</p>
-                        <p>5 years old</p>
-                        <p>Distance 10.0km</p>
-                        <div class="pet-details">
-                            <span>Breed: British Shorthair</span>
-                            <span>Sex: Female</span>
-                            <span>Age: 5 years old</span>
-                            <span>Weight: 9 pounds</span>
-=======
-                <!-- Sara Beagle Card -->
-                <div class="pet-card">
-                    <img src="../static/images/catreal2.png" alt="Sara Beagle">
-                    <div class="pet-info">
-                        <h3>SARA</h3>
-                        <p>Beagle Dog</p>
-                        <p>2 years old</p>
-                        <p>Distance 2.0km</p>
-                        <div class="pet-details">
-                            <span>Breed: Beagle</span>
-                            <span>Sex: Female</span>
-                            <span>Age: 2 years old</span>
-                            <span>Weight: 20 pounds</span>
->>>>>>> 7b29619a1c1f1e353fa80e6f9121afd553eff0a4
-                            <button class="about-btn">About</button>
-                        </div>
-                        <div class="pet-details-modal">
-                            <div class="pet-details-modal-content">
-<<<<<<< HEAD
-                                <h2>CHLOE</h2>
-                                <p>Chloe is a calm and loving British Shorthair. She enjoys lounging around and is very gentle.</p>
-=======
-                                <h2>SARA</h2>
-                                <p>Sara is super friendly and needs love and attention. She loves to play and will make a great companion for children and does well with cats and other dogs.</p>
-                                <button>Adoption</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <label for="allergies">Do you have any allergies to cats?</label>
+                <select id="allergies" name="allergies" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
 
-                <!-- Tom Beagle Card -->
-                <div class="pet-card">
-                    <img src="../static/images/cat3.png" alt="Tom Beagle">
-                    <div class="pet-info">
-                        <h3>TOM</h3>
-                        <p>Beagle Dog</p>
-                        <p>1.5 years old</p>
-                        <p>Distance 2.5km</p>
-                        <div class="pet-details">
-                            <span>Breed: Beagle</span>
-                            <span>Sex: Male</span>
-                            <span>Age: 1.5 years old</span>
-                            <span>Weight: 20 pounds</span>
-                            <button class="about-btn">About</button>
-                        </div>
-                        <div class="pet-details-modal">
-                            <div class="pet-details-modal-content">
-                                <h2>TOM</h2>
-                                <p>Tom is super friendly and needs love and attention. He loves to play and will make a great companion for children and does well with cats and other dogs.</p>
->>>>>>> 7b29619a1c1f1e353fa80e6f9121afd553eff0a4
-                                <button>Adoption</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                <label for="children">Do you have children?</label>
+                <select id="children" name="children" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <label for="experience">Do you have previous experience with cats?</label>
+                <select id="experience" name="experience" required>
+                    <option value="novice">Novice</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="experienced">Experienced</option>
+                </select>
+
+                <label for="cat-size">Preferred Cat Size:</label>
+                <select id="cat-size" name="cat-size" required>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+
+                <button type="submit">Find My Cat</button>
+            </form>
+        </section>
     </main>
     <footer>
-        <p>&copy; Pet Adoption 2024. All rights reserved.</p>
+        <p>&copy; 2024 PetFam. All rights reserved.</p>
     </footer>
 </body>
 </html>
