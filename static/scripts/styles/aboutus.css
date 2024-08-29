@@ -1,0 +1,145 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f0f0f0, #ffffff); /* Gradient background */
+}
+header {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    position: relative; /* For positioning child elements */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between nav and title */
+    padding: 0 10%;
+}
+
+nav {
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 20px; /* Space between items */
+    margin: 0; /* Remove default margin */
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px 0;
+    transition: color 0.3s, transform 0.3s;
+    border-bottom: 2px solid transparent; /* Underline effect */
+}
+
+nav ul li a:hover {
+    color: #5a3a1a; /* Color on hover */
+    transform: translateY(-3px); /* Lift effect */
+    border-bottom: 2px solid #5a3a1a; /* Underline on hover */
+}
+
+.site-title {
+    font-size: 36px; /* Adjust size as needed */
+    color: #333;
+    margin: 0;
+    margin-left: 20px; /* Space between title and nav if needed */
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 1px; /* Spacing between letters */
+    text-transform: uppercase;
+    transition: color 0.3s, transform 0.3s;
+    /* Remove order property if previously set */
+}
+
+
+#about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    padding: 0 20px; /* Padding for spacing */
+    box-sizing: border-box;
+}
+
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+/* Styling for the image column */
+.about-col-1 {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Enhanced styling for image (no box or shadow) */
+.about-col-1 img {
+    width: 100%;
+    max-width: 500px; /* Adjust max width as needed */
+    border-radius: 15px; /* Rounded corners for image */
+    /* Removed shadow and zoom effect */
+}
+
+/* Styling for the text column */
+.about-col-2 {
+    flex-basis: 50%;
+    padding: 40px; /* Increased padding for a spacious look */
+    margin-left: 20px; /* Margin to create space from the image */
+    background-color: rgba(210, 180, 140, 0.9); /* Light brown background with opacity */
+    border-radius: 15px; /* Rounded corners for the content area */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Shadow effect for the box */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+    animation: fadeIn 1s ease-out; /* Fade-in animation */
+}
+
+/* Hover effect for the box */
+.about-col-2:hover {
+    transform: translateY(-10px); /* Slight upward movement */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling for the subtitle */
+.sub-title {
+    font-size: 60px; /* Large font size for subtitle */
+    color: #8B4513; /* Brown color for subtitle text */
+    margin-top: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle text shadow for better readability */
+}
+
+/* Styling for paragraphs */
+.about-col-2 p {
+    color: #333; /* Dark color for text */
+    line-height: 1.8; /* Increased line height for readability */
+    font-size: 18px; /* Adjusted font size */
+    margin-top: 10px; 
+}

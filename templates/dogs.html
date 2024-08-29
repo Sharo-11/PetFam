@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Dogs for Adoption</title>
-    <link rel="stylesheet" href="../static/styles/adopt.css">
+    <link rel="stylesheet" href="../static/styles/dogs.css">
 </head>
 <body>
     <header>
@@ -49,9 +49,9 @@
                             <span>Sex: Male</span>
                             <span>Age: 1.5 years old</span>
                             <span>Weight: 20 pounds</span>
-                            <button class="about-btn">About</button>
+                            <button class="about-btn" data-target="#modal-peter">About</button>
                         </div>
-                        <div class="pet-details-modal">
+                        <div id="modal-peter" class="pet-details-modal">
                             <div class="pet-details-modal-content">
                                 <h2>PETER</h2>
                                 <p>Peter is super friendly and needs love and attention. He loves to play and will make a great companion for children and does well with cats and other dogs.</p>
@@ -74,9 +74,9 @@
                             <span>Sex: Female</span>
                             <span>Age: 1 year old</span>
                             <span>Weight: 10 pounds</span>
-                            <button class="about-btn">About</button>
+                            <button class="about-btn" data-target="#modal-carla">About</button>
                         </div>
-                        <div class="pet-details-modal">
+                        <div id="modal-carla" class="pet-details-modal">
                             <div class="pet-details-modal-content">
                                 <h2>CARLA</h2>
                                 <p>Carla is a playful and energetic Indie. She loves to cuddle and is very affectionate, great with children and other pets.</p>
@@ -99,9 +99,9 @@
                             <span>Sex: Female</span>
                             <span>Age: 2 years old</span>
                             <span>Weight: 20 pounds</span>
-                            <button class="about-btn">About</button>
+                            <button class="about-btn" data-target="#modal-sara">About</button>
                         </div>
-                        <div class="pet-details-modal">
+                        <div id="modal-sara" class="pet-details-modal">
                             <div class="pet-details-modal-content">
                                 <h2>SARA</h2>
                                 <p>Sara is super friendly and needs love and attention. She loves to play and will make a great companion for children and does well with cats and other dogs.</p>
@@ -124,9 +124,9 @@
                             <span>Sex: Male</span>
                             <span>Age: 1.5 years old</span>
                             <span>Weight: 20 pounds</span>
-                            <button class="about-btn">About</button>
+                            <button class="about-btn" data-target="#modal-tom">About</button>
                         </div>
-                        <div class="pet-details-modal">
+                        <div id="modal-tom" class="pet-details-modal">
                             <div class="pet-details-modal-content">
                                 <h2>TOM</h2>
                                 <p>Tom is super friendly and needs love and attention. He loves to play and will make a great companion for children and does well with cats and other dogs.</p>
@@ -141,5 +141,28 @@
     <footer>
         <p>&copy; Pet Adoption 2024. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var aboutButtons = document.querySelectorAll('.about-btn');
+            
+            aboutButtons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    var targetModal = document.querySelector(button.getAttribute('data-target'));
+                    targetModal.style.display = 'flex'; // Show the modal
+                });
+            });
+
+            var modals = document.querySelectorAll('.pet-details-modal');
+            
+            modals.forEach(function(modal) {
+                modal.addEventListener('click', function(event) {
+                    if (event.target === modal) {
+                        modal.style.display = 'none'; // Hide the modal when clicking outside the content
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
