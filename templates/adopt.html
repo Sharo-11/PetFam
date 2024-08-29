@@ -6,17 +6,22 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            Pet Adoption
+        <div class="header-content">
+            <div class="logo">
+                <img src="../static/images/logo.png" alt="Logo"> 
+            </div>
+            <h1 class="site-title">Adoption</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/foster">Foster</a></li>
+                    <li><a href="/donation">Donation</a></li>
+                    <li><a href="/community">Community</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/about">About Us</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="/community">Community</a></li>
-                <li><a href="/donation">Donation</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/about">About Us</a></li>
-            </ul>
-        </nav>
     </header>
     <main>
         <div class="search-bar">
@@ -24,11 +29,19 @@
             <button>Search</button>
         </div>
         <div class="pet-categories">
-            <a href="/dogs"><button class="active">DOGS</button></a>
-            <a href="/cats"><button>CATS</button></a>
-            <a href="/parrot"><button>PARROTS</button></a>
-            <a href="/rabbit"><button>RABBITS</button></a>
+            <a href="/adopt/dogs"><button class="active">DOGS</button></a>
+            <a href="/adopt/cats"><button>CATS</button></a>
+            <a href="/adopt/parrot"><button>PARROTS</button></a>
+            <a href="/adopt/rabbit"><button>RABBITS</button></a>
         </div>
+
+        <div class = pets-adoption>
+        <img src="../static/images/family2.png" alt="Adopt a Pet" class="adoption-image">
+
+        <div class="adoption-box">
+            <p>At PetFam, we have a variety of pets waiting for their forever homes. Whether you're looking for the loyalty of a dog, the independence of a cat, the chirpy company of a bird, or the gentle presence of a rabbit, we have the perfect companion for you. Each of our pets is ready to bring joy, love, and companionship into your life. Explore our categories and find your new best friend today!</p>
+        </div>        
+        
     </main>
     <footer>
         &copy; Pet Adoption App 2024

@@ -108,6 +108,16 @@ p {
     margin-bottom: 30px;
 }
 
+/* Intro container styling */
+.intro-container {
+    background-color: #f5e3d0; /* Light brown background */
+    color: #5a3a1a; /* Dark brown text color */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
 /* Explore button styling */
 .explore-button {
     display: inline-block;
@@ -192,3 +202,49 @@ footer {
         padding: 10px 20px;
     }
 }
+
+.services-container {
+    display: flex;
+    justify-content: space-around; /* Space out the cards evenly */
+    margin-top: 40px; /* Space above the service cards */
+    padding: 0 10%;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.service-card {
+    background: linear-gradient(to bottom, #5a3a1a, #3b2a1a); /* Gradient from lighter to darker brown */
+    color: #d9c5b2; /* Light brown text color */
+    padding: 30px; /* Increased padding for height */
+    border-radius: 10px; /* Card rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    width: 30%; /* Width of each card */
+    min-width: 250px; /* Minimum width for smaller screens */
+    margin: 10px; /* Space between cards */
+    text-align: center; /* Center-align text */
+    position: relative; /* For overlay effect */
+    height: auto; /* Automatic height based on content */
+}
+
+
+.service-button {
+    position: relative; /* Positioning context for the button */
+    z-index: 1; /* Ensures the button is above other elements */
+    margin-top: 20px; /* Space above the button */
+}
+
+.service-button a {
+    display: inline-block; /* Inline block for button shape */
+    background-color: #d9c5b2; /* Light brown background for the button */
+    color: #3b2a1a; /* Dark brown font color */
+    padding: 12px 24px; /* Padding for button size (height, width) */
+    border-radius: 25px; /* Increased rounding for a more pill-like shape */
+    text-decoration: none; /* Removes underline from link */
+    transition: background-color 0.3s; /* Smooth background change */
+    margin-left: -20px; /* Adjust left margin to create overlap */
+}
+
+.service-button a:hover {
+    background-color: #c5b1a1; /* Darker shade on hover */
+}
+
+
