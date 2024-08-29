@@ -1,14 +1,69 @@
-/* aboutus.css */
-
-/* Base Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, #f0f0f0, #ffffff); /* Gradient background */
 }
+header {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    position: relative; /* For positioning child elements */
+}
 
-/* Container for About Us Section */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between nav and title */
+    padding: 0 10%;
+}
+
+nav {
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 20px; /* Space between items */
+    margin: 0; /* Remove default margin */
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px 0;
+    transition: color 0.3s, transform 0.3s;
+    border-bottom: 2px solid transparent; /* Underline effect */
+}
+
+nav ul li a:hover {
+    color: #5a3a1a; /* Color on hover */
+    transform: translateY(-3px); /* Lift effect */
+    border-bottom: 2px solid #5a3a1a; /* Underline on hover */
+}
+
+.site-title {
+    font-size: 36px; /* Adjust size as needed */
+    color: #333;
+    margin: 0;
+    margin-left: 20px; /* Space between title and nav if needed */
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 1px; /* Spacing between letters */
+    text-transform: uppercase;
+    transition: color 0.3s, transform 0.3s;
+    /* Remove order property if previously set */
+}
+
+
 #about {
     display: flex;
     justify-content: space-between;
@@ -18,6 +73,16 @@ body {
     box-sizing: border-box;
 }
 
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
 /* Styling for the image column */
 .about-col-1 {
     flex-basis: 50%;
@@ -76,5 +141,5 @@ body {
     color: #333; /* Dark color for text */
     line-height: 1.8; /* Increased line height for readability */
     font-size: 18px; /* Adjusted font size */
-    margin-top: 10px; /* Margin to separate paragraphs */
+    margin-top: 10px; 
 }
