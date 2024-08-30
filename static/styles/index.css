@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Reset and global styling */
 * {
     margin: 0;
@@ -192,3 +193,255 @@ footer {
         padding: 10px 20px;
     }
 }
+=======
+/* Reset and global styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #f0f8ff, #e6e6e6); /* Light gradient background */
+    color: #333;
+    text-align: center;
+}
+
+/* Header styling */
+header {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    position: relative; /* For positioning child elements */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between logo, title, and nav */
+    padding: 0 10%;
+}
+
+.header-content .logo img {
+    width: 120px;
+    height: auto;
+    border-radius: 50%; /* Rounded logo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Logo shadow */
+}
+
+.site-title {
+    font-size: 36px; /* Adjust size as needed */
+    color: #333;
+    margin: 0;
+    margin-left: -400px; /* Space between logo and title */
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 1px; /* Spacing between letters */
+    text-transform: uppercase;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.site-title::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #5a3a1a; /* Accent color */
+    border-radius: 50%;
+}
+
+nav {
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 20px; /* Space between items */
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px 0;
+    transition: color 0.3s, transform 0.3s;
+    border-bottom: 2px solid transparent; /* Underline effect */
+}
+
+nav ul li a:hover {
+    color: #5a3a1a; /* Color on hover */
+    transform: translateY(-3px); /* Lift effect */
+    border-bottom: 2px solid #5a3a1a; /* Underline on hover */
+}
+
+/* Main section styling */
+main {
+    margin-top: 60px; /* Increased margin */
+    padding: 0 10%;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Enhanced text shadow */
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Intro container styling */
+.intro-container {
+    background-color: #f5e3d0; /* Light brown background */
+    color: #5a3a1a; /* Dark brown text color */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Explore button styling */
+.explore-button {
+    display: inline-block;
+    background: linear-gradient(to right, #5a3a1a, #5a3a1a); /* Gradient background */
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Button shadow */
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.explore-button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.explore-button:hover {
+    background: linear-gradient(to right, #5a3a1a, #5a3a1a); /* Darker gradient on hover */
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Stats section styling */
+.stats {
+    margin-top: 60px;
+}
+
+.stats ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 40px; /* Space between stats */
+}
+
+.stats ul li {
+    font-size: 18px;
+}
+
+.stats ul li span {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #5a3a1a; /* Accent color */
+}
+
+/* Footer styling */
+footer {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-top: 60px; /* Increased margin */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .site-title {
+        margin-left: 0;
+        margin-bottom: 10px; /* Space between title and nav */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .explore-button {
+        padding: 10px 20px;
+    }
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around; /* Space out the cards evenly */
+    margin-top: 40px; /* Space above the service cards */
+    padding: 0 10%;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.service-card {
+    background: linear-gradient(to bottom, #5a3a1a, #3b2a1a); /* Gradient from lighter to darker brown */
+    color: #d9c5b2; /* Light brown text color */
+    padding: 30px; /* Increased padding for height */
+    border-radius: 10px; /* Card rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    width: 30%; /* Width of each card */
+    min-width: 250px; /* Minimum width for smaller screens */
+    margin: 10px; /* Space between cards */
+    text-align: center; /* Center-align text */
+    position: relative; /* For overlay effect */
+    height: auto; /* Automatic height based on content */
+}
+
+
+.service-button {
+    position: relative; /* Positioning context for the button */
+    z-index: 1; /* Ensures the button is above other elements */
+    margin-top: 20px; /* Space above the button */
+}
+
+.service-button a {
+    display: inline-block; /* Inline block for button shape */
+    background-color: #d9c5b2; /* Light brown background for the button */
+    color: #3b2a1a; /* Dark brown font color */
+    padding: 12px 24px; /* Padding for button size (height, width) */
+    border-radius: 25px; /* Increased rounding for a more pill-like shape */
+    text-decoration: none; /* Removes underline from link */
+    transition: background-color 0.3s; /* Smooth background change */
+    margin-left: -20px; /* Adjust left margin to create overlap */
+}
+
+.service-button a:hover {
+    background-color: #c5b1a1; /* Darker shade on hover */
+}
+
+
+>>>>>>> a0501fb2aecda9230a9329b19ddab254e2aba35d

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from flask import Flask, render_template
 from db import inventory  # Import inventory from db.py
 from routes import setup_routes
@@ -18,3 +19,24 @@ if __name__ == '__main__':
     with app.app_context():
         inventory.create_all()  # Create database tables
     app.run(debug=True, port=5001)
+=======
+from flask import Flask, render_template
+from db import inventory
+from routes import setup_routes
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = "123456787"
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///petfam_inventory.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+inventory.init_app(app)
+
+setup_routes(app)
+
+app.static_folder = 'static'
+
+if __name__ == '__main__':
+    with app.app_context():
+        inventory.create_all()  # Create database tables
+    app.run(debug=True, port=5001)
+>>>>>>> a0501fb2aecda9230a9329b19ddab254e2aba35d

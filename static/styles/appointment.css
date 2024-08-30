@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f3e9;
+    color: #4a2c2a;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #8b4513;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.appointment-type,
+.meeting-option {
+    margin-bottom: 20px;
+}
+
+.appointment-type h2,
+.meeting-option h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+.submit-section {
+    text-align: center;
+}
+
+button {
+    background-color: #8b4513;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a0522d;
+}

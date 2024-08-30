@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* General styles for the page */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -170,3 +171,177 @@ main {
         width: 100%;
     }
 }
+=======
+/* General styles for the page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #f7f4f0, #e3d4c7);
+    color: #4f3c31;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background-color: #d1b89d;
+    padding: 20px 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav {
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 20px;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #4f3c31;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 0;
+    transition: color 0.3s, transform 0.3s, border-bottom 0.3s;
+    border-bottom: 3px solid transparent;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #6f4f28;
+    transform: translateY(-3px);
+    border-bottom: 3px solid #6f4f28;
+}
+
+/* Site Title Styling */
+.site-title {
+    font-size: 42px;
+    color: #4f3c31;
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.site-title::before {
+    content: "";
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, #6f4f28 50%, transparent 50%);
+    border-radius: 50%;
+}
+
+/* Main content styling */
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Combined box styling */
+.combined-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.image-and-form {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.pet-image {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.compatibility-form {
+    width: 50%;
+    background: #f5e8e0;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 36px;
+    color: #6f4f28;
+    margin-bottom: 20px;
+}
+
+.selection-form h2 {
+    font-size: 24px;
+    color: #6f4f28;
+    margin-bottom: 20px;
+}
+
+.selection-form button {
+    background-color: #6f4f28;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 10px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    outline: none;
+}
+
+.selection-form button:hover {
+    background-color: #5a3a1a;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .image-and-form {
+        flex-direction: column;
+    }
+
+    .pet-image, .compatibility-form {
+        width: 100%;
+    }
+}
+>>>>>>> a0501fb2aecda9230a9329b19ddab254e2aba35d

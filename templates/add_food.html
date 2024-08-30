@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Pet Food</title>
+    <link rel="stylesheet" href="../static/styles/add_food.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Add New Pet Food</h2>
+        <form action="{{ url_for('add_food') }}" method="post">
+            <label for="food_type">Food Type:</label>
+            <input type="text" id="food_type" name="food_type" required>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required>
+
+            <button type="submit">Add Food</button>
+        </form>
+        <a href="{{ url_for('admin') }}">Back to Admin Panel</a>
+    </div>
+</body>
+</html>

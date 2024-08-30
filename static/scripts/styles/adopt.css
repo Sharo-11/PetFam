@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -409,3 +410,416 @@ section a:hover {
     line-height: 1.6;
 >>>>>>> 7b29619a1c1f1e353fa80e6f9121afd553eff0a4
 }
+=======
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9eed9;
+}
+
+header {
+    background-color: #f0e4b1; 
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #ceaf67; 
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #5a3a1a;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+<<<<<<< HEAD
+header nav ul li a {
+    text-decoration: none;
+    color: #5a3a1a; 
+}
+
+main {
+    padding: 20px;
+}
+
+.search-bar {
+    margin: 0 auto 20px; 
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+}
+
+.search-bar input {
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #987f50; 
+    width: 60%;
+    max-width: 500px;
+    font-size: 16px; 
+}
+
+.search-bar button {
+    padding: 15px 20px;
+    background-color: #987f50; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.pet-categories {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.pet-categories button {
+    padding: 15px 25px; /* Increased padding for larger button size */
+    font-size: 18px; /* Larger font size for better readability */
+    font-weight: bold; /* Bold text to make the buttons stand out */
+    border: 2px solid #987f50; /* Dark Tan border to define button shape */
+    border-radius: 8px; /* Slightly rounded corners for a modern look */
+    cursor: pointer;
+    background-color: #f0e4b1; /* Pale Goldenrod for initial state */
+    color: #5a3a1a; /* Seal Brown */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effects */
+}
+
+.pet-categories button:hover {
+    background-color: #987f50; /* Dark Tan on hover */
+    color: #fff; /* White text on hover for contrast */
+}
+
+/* Active button state */
+.pet-categories button.active {
+    background-color: #f0e4b1; /* Dark Khaki for active button */
+    color: #010101; /* Black text for active button */
+    border-color: #5a3a1a; /* Seal Brown border for active button */
+}
+
+/* Responsive design for pet categories buttons */
+@media (max-width: 768px) {
+    .pet-categories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pet-categories button {
+        width: 100%; /* Full width on smaller screens for easier tapping */
+        margin-bottom: 10px; /* Space between buttons on smaller screens */
+    }
+=======
+header {
+  background-color: #f5f5f5;
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  position: relative; 
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 0 10%;
+}
+
+.logo img {
+  width: 80px; 
+  height: auto;
+  border-radius: 50%; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.site-title {
+  font-size: 28px;
+  color: #333;
+  margin: 0;
+  margin-left: 10px; 
+  font-weight: 700;
+  letter-spacing: 1px; 
+  text-transform: uppercase;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 20px; 
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 5px 0;
+  transition: color 0.3s, transform 0.3s;
+  border-bottom: 2px solid transparent; 
+}
+
+nav ul li a:hover {
+  color: #5a3a1a; 
+  transform: translateY(-3px); 
+  border-bottom: 2px solid #5a3a1a; 
+}
+
+
+.content {
+    padding: 20px;
+}
+
+.content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #5a3a1a; /* Match the theme color */
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333; /* Match the text color */
+>>>>>>> 7b29619a1c1f1e353fa80e6f9121afd553eff0a4
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid #ceaf67; /* Dark Khaki */
+    background-color: #f0e4b1; /* Pale Goldenrod */
+}
+
+footer p {
+    margin: 0;
+    color: #5a3a1a; /* Seal Brown */
+}
+<<<<<<< HEAD
+
+/* General styles for sections */
+section {
+    margin-bottom: 30px; /* Space between sections */
+    padding: 20px;
+    background-color: #fff; /* White background for clarity */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Headings for sections */
+section h2 {
+    color: #5a3a1a; /* Seal Brown */
+    margin-bottom: 15px;
+    font-size: 24px;
+    border-bottom: 2px solid #ceaf67; /* Dark Khaki */
+    padding-bottom: 10px;
+}
+
+/* Paragraph styles */
+section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333; /* Darker color for better readability */
+    margin-bottom: 15px; /* Space between paragraphs */
+}
+
+/* List styles for the adoption process */
+section ol {
+    margin-left: 20px; /* Indentation for ordered list */
+    color: #5a3a1a; /* Seal Brown */
+}
+
+section ol li {
+    margin-bottom: 10px; /* Space between list items */
+    font-size: 16px;
+}
+
+/* Compatibility test link */
+section a {
+    color: #5a3a1a; /* Seal Brown */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+section a:hover {
+    color: #987f50; /* Dark Tan for hover */
+=======
+/* styles.css */
+  
+  header .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .search-bar {
+    margin-bottom: 20px;
+  }
+  
+  .search-bar input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .search-bar button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .pet-categories {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .pet-categories button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f5f5f5;
+  }
+  
+  .pet-categories button.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .pet-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .pet-card {
+    width: 300px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .pet-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .pet-card .pet-info {
+    padding: 15px;
+  }
+  
+  .pet-card .pet-info h3 {
+    margin: 0;
+  }
+  
+  .pet-card .pet-info p {
+    margin: 5px 0;
+  }
+  
+  .pet-card .pet-info .pet-details {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .pet-card .pet-info .pet-details span {
+    font-weight: bold;
+  }
+  
+  .pet-card .pet-info .pet-details button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .pet-card .pet-details-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  .pet-card .pet-details-modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+  }
+  
+  .pet-card .pet-details-modal-content h2 {
+    margin-bottom: 15px;
+  }
+  
+  .pet-card .pet-details-modal-content p {
+    margin-bottom: 10px;
+  }
+  
+  .pet-card .pet-details-modal-content button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .adoption-box {
+    background-color: rgba(102, 51, 0, 0.7); /* Darker brown shade with 70% opacity */
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%; /* Smaller rectangular box */
+    margin: 20px auto; /* Center the box with auto margin */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More pronounced shadow for depth */
+    position: relative;
+    color: #3e2723; /* Dark brown or chocolate font color */
+}
+
+.adoption-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4); /* White overlay with 40% opacity */
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.adoption-box p {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+>>>>>>> 7b29619a1c1f1e353fa80e6f9121afd553eff0a4
+}
+>>>>>>> a0501fb2aecda9230a9329b19ddab254e2aba35d

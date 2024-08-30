@@ -1,0 +1,130 @@
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #f9eed9, #f0e4b1); /* Light gradient background with Linen and Pale Goldenrod */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensure the body takes up full height of the viewport */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    background-color: #5a3a1a; /* Seal Brown */
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em; /* Larger font size */
+    font-weight: bold;
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1px; /* Slightly spaced letters */
+}
+
+/* Main Content Styles */
+main {
+    flex: 1;
+    padding: 20px;
+    overflow: auto; /* Allow main content to scroll if necessary */
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch; /* Ensure cards stretch to the same height */
+}
+
+/* Card Styles */
+.card {
+    background-color: #cbb285; /* Dark Tan */
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow for more depth */
+    width: 300px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* More intense shadow */
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ensure images cover the card area */
+    border-bottom: 4px solid #5a3a1a; /* Seal Brown */
+    transition: filter 0.3s; /* Smooth filter transition */
+}
+
+.card:hover img {
+    filter: brightness(1.2); /* Slight brightness increase on hover */
+}
+
+.card-content {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    border-top: 4px solid #5a3a1a; /* Seal Brown */
+}
+
+.card-content h2 {
+    margin: 0;
+    font-size: 1.5em; /* Larger font size */
+    font-weight: bold;
+    color: #333;
+}
+
+.card-content p {
+    margin: 10px 0;
+    font-size: 1em; /* Standard font size */
+    color: #666; /* Lighter text color */
+}
+
+/* Button Styles */
+.adopt-button {
+    background-color: #5a3a1a; /* Seal Brown */
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 30px; /* More rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.adopt-button:hover {
+    background-color: #ceaf67; /* Dark Khaki */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #5a3a1a; /* Seal Brown */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .card {
+        width: 45%; /* Adjust card width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* Full width for very small screens */
+    }
+}
