@@ -1,0 +1,198 @@
+/* Header Styles */
+header {
+    background-color: #f0e4b1; /* Pale Goldenrod */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+    border-bottom: 2px solid #ceaf67; /* Dark Khaki */
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #5a3a1a; /* Seal Brown */
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Align navigation items horizontally */
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #5a3a1a; /* Seal Brown */
+    font-size: 16px; /* Consistent font size */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+header nav ul li a:hover {
+    color: #987f50; /* Dark Tan on hover */
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+/* Pet Cards Container */
+.pet-cards {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure cards stay in a single line */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    padding: 10px 0;
+    justify-content: center; /* Center-align the cards within the container */
+}
+
+/* Pet Card Styles */
+.pet-card {
+    background-color: #fff;
+    border-radius: 10px; /* More rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly more pronounced shadow */
+    width: 300px; /* Adjusted width for a medium card size */
+    margin: 100 50px; /* Space between cards */
+    padding: 10px; /* Increased padding for better content spacing */
+    position: relative;
+    flex-shrink: 0; /* Prevent cards from shrinking */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align items in the card */
+}
+
+/* Pet Card Image */
+.pet-card img {
+    width: 100%;
+    height: 180px; /* Slightly larger height for better visuals */
+    object-fit: cover;
+    border-radius: 10px; /* Match card border radius */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+/* Pet Card Hover Effect */
+.pet-card:hover img {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.pet-card:hover {
+    transform: scale(1.05); /* Slightly enlarge card on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+/* Pet Info Section */
+.pet-info {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.pet-info h3 {
+    font-size: 20px; /* Larger font size for names */
+    font-weight: bold;
+    color: #5a3a1a; /* Seal Brown */
+    margin-bottom: 10px;
+}
+
+.pet-info p {
+    font-size: 16px; /* Larger font size for better readability */
+    margin-bottom: 10px;
+    color: #333; /* Darker color for text */
+}
+
+/* Pet Details Section */
+.pet-details {
+    display: flex;
+    flex-direction: column; /* Stack details vertically */
+    align-items: center;
+    margin-top: 15px;
+}
+
+.pet-details span {
+    font-size: 14px;
+    color: #5a3a1a; /* Seal Brown */
+    margin-bottom: 5px;
+}
+
+/* About Button */
+.about-btn {
+    background-color: #ceaf67; /* Dark Khaki */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px; /* Consistent font size */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 15px; /* Space between details and button */
+}
+
+.about-btn:hover {
+    background-color: #987f50; /* Dark Tan */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Modal Styles */
+/* Modal Styles */
+.pet-details-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* Hide modal by default */
+    justify-content: center;
+    align-items: center;
+}
+
+.pet-details-modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 60%;
+    max-width: 500px;
+}
+
+.pet-details-modal-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #5a3a1a; /* Seal Brown */
+    margin-bottom: 10px;
+}
+
+.pet-details-modal-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.pet-details-modal-content button {
+    background-color: #ceaf67; /* Dark Khaki */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.pet-details-modal-content button:hover {
+    background-color: #987f50; /* Dark Tan */
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #f0e4b1; /* Pale Goldenrod */
+    padding: 15px;
+    text-align: center;
+    color: #5a3a1a; /* Seal Brown */
+}
