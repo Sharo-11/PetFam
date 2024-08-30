@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'base.html' %}
 {% block content %}
 <h2>Inventory Overview</h2>
@@ -39,3 +40,46 @@
 </ul>
 <a href="/add_finance">Add Finance Entry</a>
 {% endblock %}
+=======
+{% extends 'base.html' %}
+{% block content %}
+<h2>Inventory Overview</h2>
+
+<h3>Pets</h3>
+<ul>
+    {% for pet in pets %}
+    <li>
+        {{ pet.name }} ({{ pet.breed }}, {{ pet.age }} years old) - Status: {{ pet.status }}
+        <form action="{{ url_for('remove_pet', pet_id=pet.id) }}" method="post" style="display:inline;">
+            <button type="submit">Remove</button>
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+<a href="/add_pet">Add Pet</a>
+
+<h3>Pet Food</h3>
+<ul>
+    {% for food in food_items %}
+    <li>{{ food.food_type }}: {{ food.quantity }} units</li>
+    {% endfor %}
+</ul>
+<a href="/add_food">Add Food</a>
+
+<h3>Toys</h3>
+<ul>
+    {% for toy in toys %}
+    <li>{{ toy.toy_type }}: {{ toy.quantity }} units</li>
+    {% endfor %}
+</ul>
+<a href="/add_toy">Add Toy</a>
+
+<h3>Finances</h3>
+<ul>
+    {% for finance in finances %}
+    <li>${{ finance.amount }} on {{ finance.date }} - {{ finance.description }}</li>
+    {% endfor %}
+</ul>
+<a href="/add_finance">Add Finance Entry</a>
+{% endblock %}
+>>>>>>> d2090a9a9db862c0d083c65af23ea8f54f6896bb

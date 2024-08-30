@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Reset and global styling */
 * {
     margin: 0;
@@ -69,3 +70,76 @@ footer {
     bottom: 0;
     width: 100%;
 }
+=======
+/* Reset and global styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f2e6d5; /* Light background color */
+    color: #4d3c2b; /* Dark brown text color */
+    text-align: center;
+}
+
+/* Header styling */
+header {
+    background-color: #6f4c3e; /* Darker brown for header */
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.site-title {
+    font-size: 36px;
+    color: #ffffff; /* White text color */
+}
+
+/* Main section styling */
+main {
+    padding: 20px;
+}
+
+/* Foster intro styling */
+.foster-intro {
+    background-color: #d9c5b2; /* Light brown background for intro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Services container styling */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+}
+
+/* Service card styling */
+.service-card {
+    background-color: #4f3b2b; /* Dark brown background for cards */
+    color: #d9c5b2; /* Light brown font color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px; /* Width of the service cards */
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #6f4c3e; /* Darker brown for footer */
+    color: #ffffff; /* White text color */
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+>>>>>>> d2090a9a9db862c0d083c65af23ea8f54f6896bb

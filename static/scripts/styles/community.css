@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     margin: 0;
     padding: 0;
@@ -132,3 +133,139 @@ main {
     background: rgba(240, 240, 240, 0.8); 
     border-radius: 5px;
 }
+=======
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #f0f8ff, #e6e6e6); 
+}
+
+header {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    position: relative; 
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 10%;
+}
+
+.logo img {
+    width: 80px; 
+    height: auto;
+    border-radius: 50%; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.site-title {
+    font-size: 28px; 
+    color: #333;
+    margin: 0;
+    margin-left: 10px; 
+    font-weight: 700;
+    letter-spacing: 1px; 
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px 0;
+    transition: color 0.3s, transform 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul li a:hover {
+    color: #5a3a1a; 
+    transform: translateY(-3px);
+    border-bottom: 2px solid #5a3a1a; 
+}
+
+main {
+    margin-top: 20px;
+    padding: 0 10%;
+}
+
+.image-box {
+    background-color: rgba(91, 58, 26, 0.7); 
+    border: 5px solid rgba(91, 58, 26, 0.5); 
+    border-radius: 10px;
+    padding: 10px; 
+    max-width: 90%; 
+    margin: 20px auto; 
+    text-align: center; 
+}
+
+.community-image {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 5px; 
+}
+
+.comments-section {
+    margin: 20px auto; /* Reduced top margin */
+    max-width: 600px; /* Set a max width to make it smaller */
+    background: rgba(255, 255, 255, 0.8); 
+    padding: 15px; /* Reduced padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.comments-section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#commentForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#commentForm input,
+#commentForm textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#commentForm button {
+    background-color: #5a3a1a; 
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#commentForm button:hover {
+    background-color: #4a2a1a; 
+}
+
+.comment {
+    margin: 15px 0;
+    padding: 10px;
+    background: rgba(240, 240, 240, 0.8); 
+    border-radius: 5px;
+}
+>>>>>>> a0501fb2aecda9230a9329b19ddab254e2aba35d

@@ -3,76 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rabbit Compatibility Form | PetFam</title>
-    <link rel="stylesheet" href="../static/styles/rabbit.css">
+    <title>Rabbits for Adoption</title>
+    <link rel="stylesheet" href="../static/styles/test.css"> <!-- Assuming you want to use the same CSS file -->
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <nav>
-                <ul>
-                    <li><a href="/adopt">Adopt</a></li>
-                    <li><a href="/community">Community</a></li>
-                    <li><a href="/donation">Donation</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                </ul>
-            </nav>
-            <h1 class="site-title">PetFam</h1>
-        </div>
-    </header>  
+        <h1>Rabbits for Adoption</h1>
+    </header>
+
     <main>
-        <section class="compatibility-form">
-            <h2>Find Your Perfect Rabbit</h2>
-            <form action="#" method="post">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
+        <section class="service-cards">
+            <!-- Rabbit 1 -->
+            <div class="card">
+                <img src="../static/images/rabbit1.jpg" alt="Flopsy Angora">
+                <div class="pet-info">
+                    <h3>FLOPSY</h3>
+                    <p>Angora Rabbit</p>
+                    <p>2 years old</p>
+                    <p>Distance: 1.0km</p>
+                    <div class="pet-details">
+                        <span>Breed: Angora</span>
+                        <span>Sex: Female</span>
+                        <span>Age: 2 years old</span>
+                        <span>Weight: 5 pounds</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p>Flopsy is a fluffy Angora rabbit who loves to be pampered. She has a calm demeanor and enjoys being around people.</p>
+                    <button class="adopt-button">Adopt</button>
+                </div>
+            </div>
 
-                <label for="living-space">Living Space:</label>
-                <select id="living-space" name="living-space" required>
-                    <option value="apartment">Apartment</option>
-                    <option value="house">House with Yard</option>
-                    <option value="farm">Farm or Large Property</option>
-                </select>
+            <!-- Rabbit 2 -->
+            <div class="card">
+                <img src="../static/images/rabbit2.jpg" alt="Thumper Holland Lop">
+                <div class="pet-info">
+                    <h3>THUMPER</h3>
+                    <p>Holland Lop Rabbit</p>
+                    <p>1 year old</p>
+                    <p>Distance: 3.0km</p>
+                    <div class="pet-details">
+                        <span>Breed: Holland Lop</span>
+                        <span>Sex: Male</span>
+                        <span>Age: 1 year old</span>
+                        <span>Weight: 4 pounds</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p>Thumper is an energetic Holland Lop who loves to hop around and play. He is curious and enjoys exploring new places.</p>
+                    <button class="adopt-button">Adopt</button>
+                </div>
+            </div>
 
-                <label for="activity-level">Activity Level:</label>
-                <select id="activity-level" name="activity-level" required>
-                    <option value="low">Low (e.g., Calm Environment)</option>
-                    <option value="medium">Medium (e.g., Interactive Play)</option>
-                    <option value="high">High (e.g., Frequent Interaction)</option>
-                </select>
+            <!-- Rabbit 3 -->
+            <div class="card">
+                <img src="../static/images/rabbit3.jpg" alt="Snowball Dwarf">
+                <div class="pet-info">
+                    <h3>SNOWBALL</h3>
+                    <p>Dwarf Rabbit</p>
+                    <p>3 years old</p>
+                    <p>Distance: 5.0km</p>
+                    <div class="pet-details">
+                        <span>Breed: Dwarf</span>
+                        <span>Sex: Male</span>
+                        <span>Age: 3 years old</span>
+                        <span>Weight: 3 pounds</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p>Snowball is a small Dwarf rabbit who's very affectionate. He loves to snuggle. His playful nature makes him a delightful companion.</p>
+                    <button class="adopt-button">Adopt</button>
+                </div>
+            </div>
 
-                <label for="allergies">Do you have any allergies to rabbits?</label>
-                <select id="allergies" name="allergies" required>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
-
-                <label for="children">Do you have children?</label>
-                <select id="children" name="children" required>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
-
-                <label for="experience">Do you have previous experience with rabbits?</label>
-                <select id="experience" name="experience" required>
-                    <option value="novice">Novice</option>
-                    <option value="intermediate">Intermediate</option>
-                    <option value="experienced">Experienced</option>
-                </select>
-
-                <label for="rabbit-size">Preferred Rabbit Size:</label>
-                <select id="rabbit-size" name="rabbit-size" required>
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
-                </select>
-
-                <button type="submit">Find My Rabbit</button>
-            </form>
+            <!-- Rabbit 4 -->
+            <div class="card">
+                <img src="../static/images/rabbit4.jpg" alt="Cinnamon Rex">
+                <div class="pet-info">
+                    <h3>CINNAMON</h3>
+                    <p>Rex Rabbit</p>
+                    <p>4 years old</p>
+                    <p>Distance: 2.0km</p>
+                    <div class="pet-details">
+                        <span>Breed: Rex</span>
+                        <span>Sex: Female</span>
+                        <span>Age: 4 years old</span>
+                        <span>Weight: 6 pounds</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p>Cinnamon is a friendly Rex rabbit with a soft coat. She enjoys being petted & is great with kids. Her playful nature makes her a perfect companion.</p>
+                    <button class="adopt-button">Adopt</button>
+                </div>
+            </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 PetFam. All rights reserved.</p>
+        <p>&copy; 2024 Rabbit Adoption Center</p>
     </footer>
 </body>
 </html>

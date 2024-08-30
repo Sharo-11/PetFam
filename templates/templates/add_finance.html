@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'base.html' %}
 {% block content %}
 <h2>Add Finance Entry</h2>
@@ -14,3 +15,21 @@
     <button type="submit">Add Finance</button>
 </form>
 {% endblock %}
+=======
+{% extends 'base.html' %}
+{% block content %}
+<h2>Add Finance Entry</h2>
+<form method="post">
+    <label for="amount">Amount:</label>
+    <input type="text" id="amount" name="amount" required><br>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required><br>
+
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" required><br>
+
+    <button type="submit">Add Finance</button>
+</form>
+{% endblock %}
+>>>>>>> d2090a9a9db862c0d083c65af23ea8f54f6896bb

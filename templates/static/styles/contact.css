@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     margin: 0;
     padding: 0;
@@ -126,3 +127,133 @@ button {
 button:hover {
     background-color: #8a4b3a; 
 }
+=======
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; 
+}
+
+header {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    position: relative; 
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 10%;
+}
+
+.logo img {
+    width: 80px; 
+    height: auto;
+    border-radius: 50%; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.site-title {
+    font-size: 28px;
+    color: #333;
+    margin: 0;
+    margin-left: 10px; 
+    font-weight: 700;
+    letter-spacing: 1px; 
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 20px; 
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px 0;
+    transition: color 0.3s, transform 0.3s;
+    border-bottom: 2px solid transparent; 
+}
+
+nav ul li a:hover {
+    color: #5a3a1a; 
+    transform: translateY(-3px); 
+    border-bottom: 2px solid #5a3a1a; 
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 80vh; 
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+/* Image styling */
+.contact-image {
+    max-width: 40%; 
+    height: auto; 
+    border-radius: 10px; 
+    margin-right: 20px; 
+}
+
+.contact-form-container {
+    background-color: #d8b58c; 
+    padding: 60px;
+    border-radius: 30px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2); 
+    width: 450px; 
+    box-sizing: border-box; 
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 20px); 
+    padding: 20px; 
+    margin: 15px 0; 
+    border: 1px solid #5a3a1a; 
+    border-radius: 8px; 
+    font-size: 18px; 
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 150px; 
+}
+
+button {
+    background-color: #5a3a1a; 
+    color: white; 
+    padding: 20px; 
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s; 
+}
+
+button:hover {
+    background-color: #8a4b3a; 
+}
+>>>>>>> d2090a9a9db862c0d083c65af23ea8f54f6896bb
