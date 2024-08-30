@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from flask import render_template, redirect, request, url_for, Flask
 from db import inventory  # Import inventory from db.py
 from models import Pet, PetFood, Toy, Finance
@@ -117,7 +116,6 @@ def setup_routes(app: Flask):
     @app.route('/test')
     def test():
         return render_template("test.html")
-=======
 from flask import render_template, redirect, request, url_for, Flask
 from db import inventory  # Import inventory from db.py
 from models import Pet, PetFood, Toy, Finance, Appointment, Contact
@@ -236,4 +234,3 @@ def setup_routes(app: Flask):
         inventory.session.delete(contact)
         inventory.session.commit()
         return redirect(url_for('admin'))
->>>>>>> a0501fb2aecda9230a9329b19ddab254e2aba35d
