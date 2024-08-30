@@ -11,19 +11,29 @@ header {
     padding: 10px;
 }
 
+.navbar {
+    background: linear-gradient(to right, #5B3A29, #3B2A1E); /* Darker brown gradient */
+    padding: 10px 0;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0; /* Ensure no margin on the list */
 }
 
 nav ul li {
     display: inline;
-    margin-right: 10px;
+    margin-right: 20px; /* Increased margin for spacing */
 }
 
 nav ul li a {
-    color: white;
+    color: #D2B48C; /* Light brown */
     text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Underline effect on hover */
 }
 
 h2 {

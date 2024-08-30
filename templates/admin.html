@@ -1,4 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/admin.css">
+    <title>Admin PetFam</title>
+</head>
+<body>
 {% extends 'base.html' %}
+{% block navbar %}
+<nav class="navbar">
+    <div class="navbar-container">
+        <a href="/">Home</a>
+        <a href="/admin" class="active">Admin</a>
+        <a href="/logout">Logout</a>
+    </div>
+</nav>
+{% endblock %}
+
 {% block content %}
 <div class="admin-container">
     <h2>Inventory Overview</h2>
@@ -6,79 +25,105 @@
     <div class="card-container">
         <div class="service-card">
             <h3>Pets</h3>
-            <ul>
-                {% for pet in pets %}
-                <li class="inventory-item">
-                    <span>{{ pet.name }} ({{ pet.breed }}, {{ pet.age }} years old) - Status: {{ pet.status }}</span>
-                    <form action="{{ url_for('remove_pet', pet_id=pet.id) }}" method="post" style="display:inline;">
-                        <button type="submit" class="remove-button">Remove</button>
-                    </form>
-                </li>
-                {% endfor %}
-            </ul>
+            <p>Manage the pets available for adoption. You can add new pets or remove existing ones.</p>
             <a href="/add_pet" class="add-button">Add Pet</a>
+            <div>
+                <h4>Current Pets:</h4>
+                <ul>
+                    {% for pet in pets %}
+                    <li class="inventory-item">
+                        <span>{{ pet.name }} ({{ pet.breed }}, {{ pet.age }} years old) - Status: {{ pet.status }}</span>
+                        <form action="{{ url_for('remove_pet', pet_id=pet.id) }}" method="post" style="display:inline;">
+                            <button type="submit" class="remove-button">Remove</button>
+                        </form>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
 
         <div class="service-card">
             <h3>Pet Food</h3>
-            <ul>
-                {% for food in food_items %}
-                <li class="inventory-item">{{ food.food_type }}: {{ food.quantity }} units</li>
-                {% endfor %}
-            </ul>
+            <p>Keep track of the pet food inventory. Add new food items or update existing quantities.</p>
             <a href="/add_food" class="add-button">Add Food</a>
+            <div>
+                <h4>Current Food Items:</h4>
+                <ul>
+                    {% for food in food_items %}
+                    <li class="inventory-item">{{ food.food_type }}: {{ food.quantity }} units</li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
 
         <div class="service-card">
             <h3>Toys</h3>
-            <ul>
-                {% for toy in toys %}
-                <li class="inventory-item">{{ toy.toy_type }}: {{ toy.quantity }} units</li>
-                {% endfor %}
-            </ul>
+            <p>Manage the toys available for pets. Add new toys or remove old ones from the inventory.</p>
             <a href="/add_toy" class="add-button">Add Toy</a>
+            <div>
+                <h4>Current Toys:</h4>
+                <ul>
+                    {% for toy in toys %}
+                    <li class="inventory-item">{{ toy.toy_type }}: {{ toy.quantity }} units</li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
 
         <div class="service-card">
             <h3>Finances</h3>
-            <ul>
-                {% for finance in finances %}
-                <li class="inventory-item">${{ finance.amount }} on {{ finance.date }} - {{ finance.description }}</li>
-                {% endfor %}
-            </ul>
+            <p>Track the financial records for the NGO. Add new entries or review existing records.</p>
             <a href="/add_finance" class="add-button">Add Finance Entry</a>
+            <div>
+                <h4>Current Financial Records:</h4>
+                <ul>
+                    {% for finance in finances %}
+                    <li class="inventory-item">${{ finance.amount }} on {{ finance.date }} - {{ finance.description }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
 
         <div class="service-card">
             <h3>Contact Form Submissions</h3>
-            <ul>
-                {% for contact in contacts %}
-                <li class="inventory-item">
-                    <strong>{{ contact.name }}</strong> ({{ contact.email }}) - {{ contact.message }}
-                    <form action="{{ url_for('remove_contact', contact_id=contact.id) }}" method="post" style="display:inline;">
-                        <button type="submit" class="remove-button">Remove</button>
-                    </form>
-                </li>
-                {% endfor %}
-            </ul>
+            <p>Review the messages received from potential adopters. Manage submissions as needed.</p>
+            <div>
+                <h4>Current Messages:</h4>
+                <ul>
+                    {% for contact in contacts %}
+                    <li class="inventory-item">
+                        <strong>{{ contact.name }}</strong> ({{ contact.email }}) - {{ contact.message }}
+                        <form action="{{ url_for('remove_contact', contact_id=contact.id) }}" method="post" style="display:inline;">
+                            <button type="submit" class="remove-button">Remove</button>
+                        </form>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
 
         <div class="service-card">
             <h3>Appointment Requests</h3>
-            <ul>
-                {% for appointment in appointments %}
-                <li class="inventory-item">
-                    <strong>{{ appointment.user_name }}</strong> - {{ appointment.appointment_type }} ({{ appointment.meeting_option }})
-                    <form action="{{ url_for('approve_appointment', appointment_id=appointment.id) }}" method="post" style="display:inline;">
-                        <button type="submit" class="approve-button">Approve</button>
-                    </form>
-                    <form action="{{ url_for('remove_appointment', appointment_id=appointment.id) }}" method="post" style="display:inline;">
-                        <button type="submit" class="remove-button">Remove</button>
-                    </form>
-                </li>
-                {% endfor %}
-            </ul>
+            <p>Manage appointment requests from potential adopters. Approve or remove requests as needed.</p>
+            <div>
+                <h4>Current Appointments:</h4>
+                <ul>
+                    {% for appointment in appointments %}
+                    <li class="inventory-item">
+                        <strong>{{ appointment.user_name }}</strong> - {{ appointment.appointment_type }} ({{ appointment.meeting_option }})
+                        <form action="{{ url_for('approve_appointment', appointment_id=appointment.id) }}" method="post" style="display:inline;">
+                            <button type="submit" class="approve-button">Approve</button>
+                        </form>
+                        <form action="{{ url_for('remove_appointment', appointment_id=appointment.id) }}" method="post" style="display:inline;">
+                            <button type="submit" class="remove-button">Remove</button>
+                        </form>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
     </div>
 </div>
 {% endblock %}
+</body>
+</html>

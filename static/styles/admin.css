@@ -26,8 +26,17 @@ h2 {
     gap: 20px; /* Space between cards */
 }
 
+/* Brown gradient for the navigation bar */
+/* Darker brown gradient for the navigation bar */
+.navbar {
+    background: linear-gradient(to right, #3b1f1f, #5c3a3a); /* Very dark brown to medium dark brown */
+    padding: 15px; /* Adjust padding as needed */
+    color: #fff; /* Change text color for better visibility */
+}
+
+/* Keep the service card gradient */
 .service-card {
-    background-color: #fff;
+    background: linear-gradient(to bottom, #d2b48c, #f5deb3); /* Tan to wheat color */
     border: 1px solid #d1a572; /* Light brown border */
     border-radius: 10px;
     padding: 20px;
@@ -36,20 +45,14 @@ h2 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Keep the hover effect as is */
 .service-card:hover {
     transform: translateY(-5px); /* Lift effect on hover */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.inventory-section {
-    margin-bottom: 30px;
-}
 
-.inventory-section h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #8b4513;
-}
+
 
 .inventory-item {
     background-color: #f9f9f9;
@@ -65,7 +68,7 @@ h2 {
 .add-button,
 .remove-button,
 .approve-button {
-    background-color: #8b4513;
+    background: linear-gradient(to right, #8b4513, #a0522d); /* Brownish gradient */
     color: #fff;
     padding: 8px 12px;
     border: none;
