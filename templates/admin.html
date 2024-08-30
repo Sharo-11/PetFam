@@ -1,41 +1,84 @@
 {% extends 'base.html' %}
 {% block content %}
-<h2>Inventory Overview</h2>
+<div class="admin-container">
+    <h2>Inventory Overview</h2>
 
-<h3>Pets</h3>
-<ul>
-    {% for pet in pets %}
-    <li>
-        {{ pet.name }} ({{ pet.breed }}, {{ pet.age }} years old) - Status: {{ pet.status }}
-        <form action="{{ url_for('remove_pet', pet_id=pet.id) }}" method="post" style="display:inline;">
-            <button type="submit">Remove</button>
-        </form>
-    </li>
-    {% endfor %}
-</ul>
-<a href="/add_pet">Add Pet</a>
+    <div class="card-container">
+        <div class="service-card">
+            <h3>Pets</h3>
+            <ul>
+                {% for pet in pets %}
+                <li class="inventory-item">
+                    <span>{{ pet.name }} ({{ pet.breed }}, {{ pet.age }} years old) - Status: {{ pet.status }}</span>
+                    <form action="{{ url_for('remove_pet', pet_id=pet.id) }}" method="post" style="display:inline;">
+                        <button type="submit" class="remove-button">Remove</button>
+                    </form>
+                </li>
+                {% endfor %}
+            </ul>
+            <a href="/add_pet" class="add-button">Add Pet</a>
+        </div>
 
-<h3>Pet Food</h3>
-<ul>
-    {% for food in food_items %}
-    <li>{{ food.food_type }}: {{ food.quantity }} units</li>
-    {% endfor %}
-</ul>
-<a href="/add_food">Add Food</a>
+        <div class="service-card">
+            <h3>Pet Food</h3>
+            <ul>
+                {% for food in food_items %}
+                <li class="inventory-item">{{ food.food_type }}: {{ food.quantity }} units</li>
+                {% endfor %}
+            </ul>
+            <a href="/add_food" class="add-button">Add Food</a>
+        </div>
 
-<h3>Toys</h3>
-<ul>
-    {% for toy in toys %}
-    <li>{{ toy.toy_type }}: {{ toy.quantity }} units</li>
-    {% endfor %}
-</ul>
-<a href="/add_toy">Add Toy</a>
+        <div class="service-card">
+            <h3>Toys</h3>
+            <ul>
+                {% for toy in toys %}
+                <li class="inventory-item">{{ toy.toy_type }}: {{ toy.quantity }} units</li>
+                {% endfor %}
+            </ul>
+            <a href="/add_toy" class="add-button">Add Toy</a>
+        </div>
 
-<h3>Finances</h3>
-<ul>
-    {% for finance in finances %}
-    <li>${{ finance.amount }} on {{ finance.date }} - {{ finance.description }}</li>
-    {% endfor %}
-</ul>
-<a href="/add_finance">Add Finance Entry</a>
+        <div class="service-card">
+            <h3>Finances</h3>
+            <ul>
+                {% for finance in finances %}
+                <li class="inventory-item">${{ finance.amount }} on {{ finance.date }} - {{ finance.description }}</li>
+                {% endfor %}
+            </ul>
+            <a href="/add_finance" class="add-button">Add Finance Entry</a>
+        </div>
+
+        <div class="service-card">
+            <h3>Contact Form Submissions</h3>
+            <ul>
+                {% for contact in contacts %}
+                <li class="inventory-item">
+                    <strong>{{ contact.name }}</strong> ({{ contact.email }}) - {{ contact.message }}
+                    <form action="{{ url_for('remove_contact', contact_id=contact.id) }}" method="post" style="display:inline;">
+                        <button type="submit" class="remove-button">Remove</button>
+                    </form>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <h3>Appointment Requests</h3>
+            <ul>
+                {% for appointment in appointments %}
+                <li class="inventory-item">
+                    <strong>{{ appointment.user_name }}</strong> - {{ appointment.appointment_type }} ({{ appointment.meeting_option }})
+                    <form action="{{ url_for('approve_appointment', appointment_id=appointment.id) }}" method="post" style="display:inline;">
+                        <button type="submit" class="approve-button">Approve</button>
+                    </form>
+                    <form action="{{ url_for('remove_appointment', appointment_id=appointment.id) }}" method="post" style="display:inline;">
+                        <button type="submit" class="remove-button">Remove</button>
+                    </form>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
 {% endblock %}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Scheduling</title>
+    <link rel="stylesheet" href="../static/styles/appointment.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Schedule an Appointment</h1>
+        <p>Select the type of appointment you would like to schedule:</p>
+        
+        <form action="/schedule_appointment" method="POST">
+            <div class="appointment-type">
+                <h2>Visit Your Pet</h2>
+                <label>
+                    <input type="radio" name="appointment_type" value="visit_pet" required>
+                    I want to visit my pet at the NGO
+                </label>
+            </div>
+            
+            <div class="appointment-type">
+                <h2>Meet a Pet for Adoption</h2>
+                <label>
+                    <input type="radio" name="appointment_type" value="meet_pet" required>
+                    I want to meet a pet for adoption
+                </label>
+            </div>
+
+            <div class="meeting-option">
+                <h3>Choose Meeting Option:</h3>
+                <label>
+                    <input type="radio" name="meeting_option" value="online" required>
+                    Online Meeting
+                </label>
+                <label>
+                    <input type="radio" name="meeting_option" value="offline" required>
+                    Offline Meeting
+                </label>
+            </div>
+
+            <div class="submit-section">
+                <button type="submit">Schedule Appointment</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

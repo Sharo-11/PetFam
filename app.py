@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from db import inventory  # Import inventory from db.py
+from db import inventory
 from routes import setup_routes
 
 app = Flask(__name__)
@@ -7,7 +7,6 @@ app.config['SECRET_KEY'] = "123456787"
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///petfam_inventory.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-# Initialize the SQLAlchemy instance with the Flask app
 inventory.init_app(app)
 
 setup_routes(app)

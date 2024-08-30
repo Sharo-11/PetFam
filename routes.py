@@ -1,6 +1,6 @@
 from flask import render_template, redirect, request, url_for, Flask
 from db import inventory  # Import inventory from db.py
-from models import Pet, PetFood, Toy, Finance
+from models import Pet, PetFood, Toy, Finance, Appointment, Contact
 
 def setup_routes(app: Flask):
     @app.route('/')
@@ -30,7 +30,10 @@ def setup_routes(app: Flask):
     @app.route('/foster')
     def foster():
         return render_template("foster.html")
-
+    
+    @app.route('/appointment')
+    def appointment():
+        return render_template("appointment.html")
     
     @app.route('/admin')
     def admin():
@@ -93,3 +96,23 @@ def setup_routes(app: Flask):
             inventory.session.commit()
             return redirect(url_for('admin'))
         return render_template('add_finance.html')
+
+    @app.route('/approve_appointment/<int:appointment_id>', methods=['POST'])
+    def approve_appointment(appointment_id):
+        appointment = Appointment.query.get(appointment_id)
+        # Handle appointment approval
+        return redirect(url_for('admin'))
+
+    @app.route('/remove_appointment/<int:appointment_id>', methods=['POST'])
+    def remove_appointment(appointment_id):
+        appointment = Appointment.query.get(appointment_id)
+        inventory.session.delete(appointment)
+        inventory.session.commit()
+        return redirect(url_for('admin'))
+
+    @app.route('/remove_contact/<int:contact_id>', methods=['POST'])
+    def remove_contact(contact_id):
+        contact = Contact.query.get(contact_id)
+        inventory.session.delete(contact)
+        inventory.session.commit()
+        return redirect(url_for('admin'))
