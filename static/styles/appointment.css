@@ -4,10 +4,88 @@ body {
     color: #4a2c2a;
     margin: 0;
     padding: 0;
+    height: auto; /* Remove fixed height */
+}
+
+header {
+    background-color: #ceaf90;
+    padding: 10px 0; /* Increased padding for better spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    position: relative; /* For positioning child elements */
+    display: flex; /* Use flexbox to align items */
+    justify-content: center; /* Center the header content */
+}
+
+.header-content {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    justify-content: space-between; /* Space between logo, title, and nav */
+    padding: 0 10%; /* Maintain side padding */
+    width: 100%; /* Ensure full width */
+}
+
+.header-content .logo img {
+    width: 120px;
+    height: auto;
+    border-radius: 50%; /* Rounded logo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Logo shadow */
+}
+
+.site-title {
+    font-size: 36px; /* Adjust size as needed */
+    color: #333;
+    margin: 0;
+    margin-left: -400px; /* Space between logo and title */
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 1px; /* Spacing between letters */
+    text-transform: uppercase;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.site-title::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #5a3a1a; /* Accent color */
+    border-radius: 50%;
+}
+
+nav {
+    margin: 0; /* Remove margin to avoid spacing issues */
+    flex-shrink: 0; /* Prevent nav from shrinking */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 20px; /* Space between items */
+    margin: 0; /* Remove margin for a clean look */
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px 0;
+    transition: color 0.3s, transform 0.3s;
+    border-bottom: 2px solid transparent; /* Underline effect */
+}
+
+nav ul li a:hover {
+    color: #5a3a1a; /* Color on hover */
+    transform: translateY(-3px); /* Lift effect */
+    border-bottom: 2px solid #5a3a1a; /* Underline on hover */
 }
 
 .container {
@@ -17,6 +95,7 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     max-width: 500px;
     width: 100%;
+    margin-top: 20px; /* Optional: Adds space between header and container */
 }
 
 h1 {

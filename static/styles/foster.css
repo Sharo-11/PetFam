@@ -14,14 +14,79 @@ body {
 
 /* Header styling */
 header {
-    background-color: #6f4c3e; /* Darker brown for header */
-    padding: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ceaf90;
+  padding: 5px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  position: relative; /* For positioning child elements */
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between logo, title, and nav */
+  padding: 0 10%;
+}
+
+.header-content .logo img {
+  width: 120px;
+  height: auto;
+  border-radius: 50%; /* Rounded logo */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Logo shadow */
 }
 
 .site-title {
-    font-size: 36px;
-    color: #ffffff; /* White text color */
+  font-size: 36px; /* Adjust size as needed */
+  color: #333;
+  margin: 0;
+  margin-left: -400px; /* Space between logo and title */
+  position: relative;
+  font-weight: 700;
+  letter-spacing: 1px; /* Spacing between letters */
+  text-transform: uppercase;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.site-title::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #5a3a1a; /* Accent color */
+  border-radius: 50%;
+}
+
+nav {
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 20px; /* Space between items */
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 5px 0;
+  transition: color 0.3s, transform 0.3s;
+  border-bottom: 2px solid transparent; /* Underline effect */
+}
+
+nav ul li a:hover {
+  color: #5a3a1a; /* Color on hover */
+  transform: translateY(-3px); /* Lift effect */
+  border-bottom: 2px solid #5a3a1a; /* Underline on hover */
 }
 
 /* Main section styling */
