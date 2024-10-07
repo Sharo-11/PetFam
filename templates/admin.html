@@ -10,11 +10,9 @@
 {% extends 'base.html' %}
 {% block navbar %}
 <nav class="navbar">
-    <div class="navbar-container">
-        <a href="/">Home</a>
-        <a href="/admin" class="active">Admin</a>
-        <a href="/logout">Logout</a>
-    </div>
+    <a href="/">Home</a>
+    <a href="/admin" class="active">Admin</a>
+    <a href="/logout">Logout</a>
 </nav>
 {% endblock %}
 
@@ -124,6 +122,15 @@
         </div>
     </div>
 </div>
+
+<footer>
+    <div class="footer-content">
+        <p>Contact us: <a href="mailto:support@petfam.com">support@petfam.com</a></p>
+        <div class="social-links">
+            <a href="#" target="_blank">Facebook</a>
+            <a href="#" target="_blank">Twitter</a>
+            <a href="#" target="_blank">Instagram</a>
+        </div>
+    </div>
+</footer>
 {% endblock %}
-</body>
-</html>

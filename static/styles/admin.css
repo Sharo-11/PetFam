@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f7f3e9;
     color: #4a2c2a;
+    margin: 0;
 }
 
 .admin-container {
@@ -27,11 +28,23 @@ h2 {
 }
 
 /* Brown gradient for the navigation bar */
-/* Darker brown gradient for the navigation bar */
 .navbar {
-    background: linear-gradient(to right, #3b1f1f, #5c3a3a); /* Very dark brown to medium dark brown */
+    background: linear-gradient(to right, #3b1f1f, #5c3a3a); /* Darker brown gradient */
     padding: 15px; /* Adjust padding as needed */
     color: #fff; /* Change text color for better visibility */
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #d9b183; /* Light brown on hover */
 }
 
 /* Keep the service card gradient */
@@ -50,9 +63,6 @@ h2 {
     transform: translateY(-5px); /* Lift effect on hover */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
-
-
-
 
 .inventory-item {
     background-color: #f9f9f9;
@@ -82,4 +92,29 @@ h2 {
 .remove-button:hover,
 .approve-button:hover {
     background-color: #a0522d; /* Darker shade on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #8b5a2b; /* Lighter brown background */
+    color: #fff; /* White text for contrast */
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px; /* Space above the footer */
+    border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+    position: relative;
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+}
+
+footer a {
+    color: #d9b183; /* Light brown for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #fff; /* Change link color on hover */
 }

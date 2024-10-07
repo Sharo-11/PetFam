@@ -21,9 +21,16 @@
 
             <label for="status">Status:</label>
             <select id="status" name="status" required>
-                <option value="Available">Available</option>
                 <option value="Adopted">Adopted</option>
                 <option value="Fostered">Fostered</option>
+                <option value="Donated">Donated</option>
+            </select>
+
+            <label for="request_type">Request Type:</label>
+            <select id="request_type" name="request_type" required>
+                <option value="Adoption">Adoption</option>
+                <option value="Fostering">Fostering</option>
+                <option value="Donation">Donation</option>
             </select>
 
             <button type="submit">Add Pet</button>

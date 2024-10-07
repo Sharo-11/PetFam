@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Pet Toy</title>
+    <link rel="stylesheet" href="../static/styles/add_toy.css"> 
+</head>
+<body>
+    <div class="container">
+        <h2>Add New Pet Toy</h2>
+        <form action="{{ url_for('add_toy') }}" method="post">
+            <label for="toy_name">Toy Name:</label>
+            <input type="text" id="toy_name" name="toy_name" required>
+
+            <label for="toy_type">Toy Type:</label>
+            <input type="text" id="toy_type" name="toy_type" required>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required>
+
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="Available">Available</option>
+                <option value="Out of Stock">Out of Stock</option>
+            </select>
+
+            <button type="submit">Add Toy</button>
+        </form>
+        <a href="{{ url_for('admin') }}">Back to Admin Panel</a>
+    </div>
+</body>
+</html>

@@ -51,6 +51,10 @@ def setup_routes(app: Flask):
     def compatible():
         return render_template("compatible.html")
 
+    @app.route('/appointment')
+    def appointment():
+        return render_template("appointment.html")
+
     @app.route('/admin')
     def admin():
         pets = Pet.query.all()
