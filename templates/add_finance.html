@@ -3,6 +3,9 @@
 <link rel="stylesheet" href="../static/styles/add_finance.css"> 
 <h2>Add Finance Entry</h2>
 <div class="container">
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
     <form method="post">
         <label for="amount">Amount:</label>
         <input type="text" id="amount" name="amount" required>

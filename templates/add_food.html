@@ -11,14 +11,41 @@
         <h2>Add New Pet Food</h2>
         <form action="{{ url_for('add_food') }}" method="post">
             <label for="food_type">Food Type:</label>
-            <input type="text" id="food_type" name="food_type" required>
+            <select id="food_type" name="food_type" required>
+                <option value="Dry Food">Dry Food</option>
+                <option value="Wet Food">Wet Food</option>
+                <option value="Treats">Treats</option>
+                <option value="Others">Others</option>
+            </select>
+            <input type="text" id="other_food" name="other_food" placeholder="Specify other food type" style="display:none;">
 
             <label for="quantity">Quantity:</label>
             <input type="number" id="quantity" name="quantity" required>
+
+            <label for="unit">Unit:</label>
+            <select id="unit" name="unit" required>
+                <option value="grams">Grams</option>
+                <option value="kilograms">Kilograms</option>
+                <option value="pounds">Pounds</option>
+                <option value="liters">Liters</option>
+                <option value="milliliters">Milliliters</option>
+            </select>
 
             <button type="submit">Add Food</button>
         </form>
         <a href="{{ url_for('admin') }}">Back to Admin Panel</a>
     </div>
+    <script>
+        const foodTypeSelect = document.getElementById('food_type');
+        const otherFoodInput = document.getElementById('other_food');
+
+        foodTypeSelect.addEventListener('change', function() {
+            if (this.value === 'Others') {
+                otherFoodInput.style.display = 'block';
+            } else {
+                otherFoodInput.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate Money | PetFam</title>
-    <link rel="stylesheet" href="../static/styles/donatemoney.css">
+    <title>Donate Other Items | PetFam</title>
+    <link rel="stylesheet" href="../static/styles/donate_other.css">
 </head>
 <body>
     <header>
@@ -22,10 +22,10 @@
     </header>
     <main>
         <section class="form-container">
-            <h2>Donate Money</h2>
-            <form action="/submit-donate-money" method="POST">
-                <label for="amount">Amount:</label>
-                <input type="number" id="amount" name="amount" required>
+            <h2>Donate Other Items</h2>
+            <form action="/submit-donate-other" method="POST">
+                <label for="items">Items:</label>
+                <textarea id="items" name="items" required></textarea>
                 
                 <label for="name">Your Name:</label>
                 <input type="text" id="name" name="name" required>

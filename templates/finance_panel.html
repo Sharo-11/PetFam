@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Panel</title>
+    <link rel="stylesheet" href="../static/styles/finance_panel.css"> 
+    
+</head>
+<body>
+    <h1>Finance Panel</h1>
+    <h2>Total Amount Available: Rs. {{ total_amount }}</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for finance in finances %}
+            <tr>
+                <td>{{ finance.id }}</td>
+                <td>Rs. {{ finance.amount }}</td>
+                <td>{{ finance.date }}</td>
+                <td>{{ finance.description }}</td>
+                <td>
+                    <form action="{{ url_for('remove_finance', finance_id=finance.id) }}" method="POST">
+                        <button type="submit">Remove</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

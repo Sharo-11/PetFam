@@ -1,0 +1,22 @@
+/* Food Panel Styles */
+.food-panel {
+    background-color: #e7f3fe; /* Light blue background */
+    border: 1px solid #cfe2ff; /* Blue border */
+}
+
+.food-panel h2 {
+    color: #0056b3; /* Dark blue color for headings */
+}
+
+.food-panel ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.food-panel li {
+    background: #fff; /* White background for list items */
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #007bff; /* Blue border for items */
+    border-radius: 5px;
+}

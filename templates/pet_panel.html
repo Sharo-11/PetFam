@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Panel</title>
+    <link rel="stylesheet" href="../static/styles/pet_panel.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Pet Panel</h2>
+        <div class="category">
+            <h3>Adopted Pets</h3>
+            <ul>
+                {% for pet in adopted_pets %}
+                <li>{{ pet.name }} ({{ pet.breed }}, {{ pet.age }} years old)</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="category">
+            <h3>Fostered Pets</h3>
+            <ul>
+                {% for pet in fostered_pets %}
+                <li>{{ pet.name }} ({{ pet.breed }}, {{ pet.age }} years old)</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="category">
+            <h3>Donated Pets</h3>
+            <ul>
+                {% for pet in donated_pets %}
+                <li>{{ pet.name }} ({{ pet.breed }}, {{ pet.age }} years old)</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <a href="{{ url_for('admin') }}">Back to Admin Panel</a>
+    </div>
+</body>
+</html>

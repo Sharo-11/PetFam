@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/food_panel.css">
+    <title>Food Panel - Admin PetFam</title>
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block navbar %}
+<nav class="navbar">
+    <a href="/">Home</a>
+    <a href="/admin">Admin</a>
+    <a href="/logout">Logout</a>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="food-panel">
+    <h2>Food Inventory</h2>
+    <ul>
+        {% if food_items %}
+            {% for food in food_items %}
+                <li>{{ food.food_type }}: {{ food.quantity }} units</li>
+            {% endfor %}
+        {% else %}
+            <li>No food items available.</li>
+        {% endif %}
+    </ul>
+</div>
+{% endblock %}
+
+{% block footer %}
+<footer>
+    <div class="footer-content">
+        <p>Contact us: <a href="mailto:support@petfam.com">support@petfam.com</a></p>
+        <div class="social-links">
+            <a href="#" target="_blank">Facebook</a>
+            <a href="#" target="_blank">Twitter</a>
+            <a href="#" target="_blank">Instagram</a>
+        </div>
+    </div>
+</footer>
+{% endblock %}

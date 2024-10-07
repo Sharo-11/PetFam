@@ -1,0 +1,22 @@
+/* Contact Panel Styles */
+.contact-panel {
+    background-color: #f5c6cb; /* Light red background */
+    border: 1px solid #f1b0b7; /* Red border */
+}
+
+.contact-panel h2 {
+    color: #721c24; /* Dark red color for headings */
+}
+
+.contact-panel ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-panel li {
+    background: #fff; /* White background for list items */
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #dc3545; /* Red border for items */
+    border-radius: 5px;
+}

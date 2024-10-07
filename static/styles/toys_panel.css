@@ -1,0 +1,22 @@
+/* Toys Panel Styles */
+.toys-panel {
+    background-color: #f9e79f; /* Light yellow background */
+    border: 1px solid #f6e58d; /* Yellow border */
+}
+
+.toys-panel h2 {
+    color: #9a7d0a; /* Dark yellow color for headings */
+}
+
+.toys-panel ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.toys-panel li {
+    background: #fff; /* White background for list items */
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #c8d6e5; /* Light gray border for items */
+    border-radius: 5px;
+}

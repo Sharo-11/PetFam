@@ -24,26 +24,27 @@
         <div class="service-card">
             <h3>Pets</h3>
             <p>Manage the pets available for adoption. You can add new pets or remove existing ones.</p>
-            <a href="/add_pet" class="add-button">Add Pet</a>
+            <div class="button-group">
+                <a href="/add_pet" class="add-button">Add Pet</a>
+                <a href="/pet_panel" class="add-button">Pet Panel</a>
+            </div>
             <div>
                 <h4>Current Pets:</h4>
                 <ul>
-                    {% for pet in pets %}
-                    <li class="inventory-item">
-                        <span>{{ pet.name }} ({{ pet.breed }}, {{ pet.age }} years old) - Status: {{ pet.status }}</span>
-                        <form action="{{ url_for('remove_pet', pet_id=pet.id) }}" method="post" style="display:inline;">
-                            <button type="submit" class="remove-button">Remove</button>
-                        </form>
-                    </li>
-                    {% endfor %}
+                    <li class="inventory-item">Adopted Pets: {{ pets | selectattr('status', 'equalto', 'Adopted') | list | length }}</li>
+                    <li class="inventory-item">Fostered Pets: {{ pets | selectattr('status', 'equalto', 'Fostered') | list | length }}</li>
+                    <li class="inventory-item">Donated Pets: {{ pets | selectattr('status', 'equalto', 'Donated') | list | length }}</li>
                 </ul>
             </div>
         </div>
-
+        
         <div class="service-card">
             <h3>Pet Food</h3>
             <p>Keep track of the pet food inventory. Add new food items or update existing quantities.</p>
-            <a href="/add_food" class="add-button">Add Food</a>
+            <div class="button-group">
+                <a href="/add_food" class="add-button">Add Food</a>
+                <a href="/food_panel" class="add-button">Food Panel</a>
+            </div>
             <div>
                 <h4>Current Food Items:</h4>
                 <ul>
@@ -53,11 +54,14 @@
                 </ul>
             </div>
         </div>
-
+        
         <div class="service-card">
             <h3>Toys</h3>
             <p>Manage the toys available for pets. Add new toys or remove old ones from the inventory.</p>
-            <a href="/add_toy" class="add-button">Add Toy</a>
+            <div class="button-group">
+                <a href="/add_toy" class="add-button">Add Toy</a>
+                <a href="/toys_panel" class="add-button">Toys Panel</a>
+            </div>
             <div>
                 <h4>Current Toys:</h4>
                 <ul>
@@ -67,24 +71,26 @@
                 </ul>
             </div>
         </div>
-
+        
         <div class="service-card">
             <h3>Finances</h3>
             <p>Track the financial records for the NGO. Add new entries or review existing records.</p>
-            <a href="/add_finance" class="add-button">Add Finance Entry</a>
+            <div class="button-group">
+                <a href="/add_finance" class="add-button">Add Finance Entry</a>
+                <a href="/finance_panel" class="add-button">Finance Panel</a>
+            </div>
             <div>
                 <h4>Current Financial Records:</h4>
-                <ul>
-                    {% for finance in finances %}
-                    <li class="inventory-item">${{ finance.amount }} on {{ finance.date }} - {{ finance.description }}</li>
-                    {% endfor %}
-                </ul>
+                <p>Total Amount Available: Rs. {{ total_amount }}</p>
             </div>
         </div>
-
+        
         <div class="service-card">
             <h3>Contact Form Submissions</h3>
             <p>Review the messages received from potential adopters. Manage submissions as needed.</p>
+            <div class="button-group">
+                <a href="/contact_panel" class="add-button">Contact Panel</a>
+            </div>
             <div>
                 <h4>Current Messages:</h4>
                 <ul>
@@ -99,10 +105,13 @@
                 </ul>
             </div>
         </div>
-
+        
         <div class="service-card">
             <h3>Appointment Requests</h3>
             <p>Manage appointment requests from potential adopters. Approve or remove requests as needed.</p>
+            <div class="button-group">
+                <a href="/appointment_panel" class="add-button">Appointment Panel</a>
+            </div>
             <div>
                 <h4>Current Appointments:</h4>
                 <ul>
@@ -120,6 +129,7 @@
                 </ul>
             </div>
         </div>
+        
     </div>
 </div>
 

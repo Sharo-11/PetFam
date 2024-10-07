@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/appointment_panel.css">
+    <title>Appointment Panel</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+    <div class="panel-container">
+        <h2>Appointment Requests Panel</h2>
+        <ul>
+            {% for appointment in appointments %}
+            <li>
+                <strong>{{ appointment.user_name }}</strong> - {{ appointment.appointment_type }} ({{ appointment.meeting_option }})
+                <form action="{{ url_for('approve_appointment', appointment_id=appointment.id) }}" method="post" style="display:inline;">
+                    <button type="submit" class="approve-button">Approve</button>
+                </form>
+                <form action="{{ url_for('remove_appointment', appointment_id=appointment.id) }}" method="post" style="display:inline;">
+                    <button type="submit" class="remove-button">Remove</button>
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="/admin" class="back-button">Back to Admin</a>
+    </div>
+{% endblock %}
+</body>
+</html>

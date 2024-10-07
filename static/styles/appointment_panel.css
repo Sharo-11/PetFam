@@ -1,0 +1,22 @@
+/* Appointment Panel Styles */
+.appointment-panel {
+    background-color: #d1ecf1; /* Light cyan background */
+    border: 1px solid #bee5eb; /* Cyan border */
+}
+
+.appointment-panel h2 {
+    color: #0c5460; /* Dark cyan color for headings */
+}
+
+.appointment-panel ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.appointment-panel li {
+    background: #fff; /* White background for list items */
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #17a2b8; /* Cyan border for items */
+    border-radius: 5px;
+}

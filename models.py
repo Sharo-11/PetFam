@@ -5,17 +5,19 @@ class Pet(inventory.Model):
     name = inventory.Column(inventory.String(100), nullable=False)
     age = inventory.Column(inventory.Integer, nullable=False)
     breed = inventory.Column(inventory.String(100), nullable=False)
-    status = inventory.Column(inventory.String(50), nullable=False)
+    status = inventory.Column(inventory.String(50), nullable=False, default='available')  # Default status
 
 class PetFood(inventory.Model):
     id = inventory.Column(inventory.Integer, primary_key=True)
     food_type = inventory.Column(inventory.String(100), nullable=False)
     quantity = inventory.Column(inventory.Integer, nullable=False)
+    unit = inventory.Column(inventory.String(50), nullable=False)  # Ensure this is mandatory if needed
 
 class Toy(inventory.Model):
     id = inventory.Column(inventory.Integer, primary_key=True)
     toy_type = inventory.Column(inventory.String(100), nullable=False)
     quantity = inventory.Column(inventory.Integer, nullable=False)
+    unit = inventory.Column(inventory.String(50), nullable=True)  # Optional
 
 class Finance(inventory.Model):
     id = inventory.Column(inventory.Integer, primary_key=True)

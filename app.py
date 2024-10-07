@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from db import inventory  # Import inventory from db.py
+from db import inventory
 from routes import setup_routes
 
 app = Flask(__name__)

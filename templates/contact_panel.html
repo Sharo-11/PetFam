@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/contact.css">
+    <title>Contact Panel</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+    <div class="panel-container">
+        <h2>Contact Form Submissions Panel</h2>
+        <ul>
+            {% for contact in contacts %}
+            <li>
+                <strong>{{ contact.name }}</strong> ({{ contact.email }}) - {{ contact.message }}
+                <form action="{{ url_for('remove_contact', contact_id=contact.id) }}" method="post" style="display:inline;">
+                    <button type="submit" class="remove-button">Remove</button>
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="/admin" class="back-button">Back to Admin</a>
+    </div>
+{% endblock %}
+</body>
+</html>

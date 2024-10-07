@@ -1,0 +1,22 @@
+/* Finance Panel Styles */
+.finance-panel {
+    background-color: #d4edda; /* Light green background */
+    border: 1px solid #c3e6cb; /* Green border */
+}
+
+.finance-panel h2 {
+    color: #155724; /* Dark green color for headings */
+}
+
+.finance-panel ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.finance-panel li {
+    background: #fff; /* White background for list items */
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #28a745; /* Green border for items */
+    border-radius: 5px;
+}
