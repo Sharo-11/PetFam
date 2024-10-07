@@ -22,8 +22,6 @@ class Finance(inventory.Model):
     amount = inventory.Column(inventory.Float, nullable=False)
     date = inventory.Column(inventory.Date, nullable=False)
     description = inventory.Column(inventory.String(255), nullable=False)
-<<<<<<< HEAD
-=======
 
 class Appointment(inventory.Model):
     id = inventory.Column(inventory.Integer, primary_key=True)
@@ -36,4 +34,3 @@ class Contact(inventory.Model):
     name = inventory.Column(inventory.String(100), nullable=False)
     email = inventory.Column(inventory.String(100), nullable=False)
     message = inventory.Column(inventory.Text, nullable=False)
->>>>>>> a0501fb2aecda9230a9329b19ddab254e2aba35d
