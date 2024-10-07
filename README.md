@@ -86,7 +86,7 @@ To run **PetFam** locally, follow these steps:
 ### Homepage
 ![PetFam Homepage](./static/images/homepage.png)
 
-### About Us Oage
+### About Us Page
 ![Pet Adoption](./static/images/aboutus.png)
 
 ### Donation Page
