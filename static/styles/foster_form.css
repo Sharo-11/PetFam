@@ -1,0 +1,180 @@
+/* Reset and global styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: #f7f3f0; /* Light background color */
+    color: #4d3c2b; /* Dark brown text color */
+    text-align: center;
+    line-height: 1.6; /* Better readability */
+  }
+  
+  /* Header styling */
+  header {
+    background-color: #6f4c3e; /* Dark brown header */
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Sticky header on scroll */
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+  }
+  
+  .header-content .logo img {
+    width: 120px; /* Slightly larger logo */
+    height: auto;
+    border-radius: 5%;
+  }
+  
+  .site-title {
+    font-size: 32px; /* Increased font size for title */
+    color: #fff;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .site-title:hover {
+    color: #f0e5d8; /* Lighter color on hover */
+    transform: scale(1.05); /* Slightly scale the title */
+  }
+  
+  nav {
+    margin: 0;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Increased spacing between nav items */
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s, transform 0.3s;
+    padding: 5px 10px; /* Added padding for better clickable area */
+    border-radius: 5px; /* Rounded corners for links */
+  }
+  
+  nav ul li a:hover {
+    color: #d9c5b2; /* Light brown on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+  }
+  
+  /* Main section styling */
+  main {
+    padding: 40px 20px;
+  }
+  
+  /* Foster form styling */
+  form {
+    background-color: #fff; /* White background for the form */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Increased space between form elements */
+    max-width: 600px; /* Set a max-width for better alignment */
+    margin: 0 auto; /* Center form */
+  }
+  
+  form label {
+    font-weight: bold; /* Bold labels */
+    color: #5a3a1a; /* Color for labels */
+    text-align: left; /* Align labels to the left */
+  }
+  
+  form input[type="text"],
+  form textarea {
+    padding: 12px; /* Increased padding for better input */
+    border: 2px solid #d9c5b2; /* Darker border color */
+    border-radius: 5px;
+    background-color: #f7f2eb; /* Light background for inputs */
+    color: #4d3c2b;
+    transition: border-color 0.3s; /* Transition for border color */
+  }
+  
+  form input[type="text"]:focus,
+  form textarea:focus {
+    border-color: #5a3a1a; /* Darker border on focus */
+    outline: none; /* Remove default outline */
+  }
+  
+  form button {
+    padding: 12px 25px; /* Increased button size */
+    background-color: #b08968; /* Button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Increase font size */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+  }
+  
+  form button:hover {
+    background-color: #c19a77; /* Lighter shade on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+  }
+  
+  form button:active {
+    transform: translateY(0); /* Reset lift effect on click */
+  }
+  
+  /* Footer styling */
+  footer {
+    background-color: #6f4c3e; /* Dark footer */
+    color: #ffffff;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2); /* Shadow for footer */
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center; /* Center align on smaller screens */
+    }
+  
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    nav ul li {
+        margin-bottom: 10px;
+    }
+  
+    form {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+  
+    form label,
+    form button {
+        font-size: 14px; /* Decrease font size on smaller screens */
+    }
+  }
+  
