@@ -222,6 +222,10 @@ def setup_routes(app: Flask):
         donation_type = request.form['donation_type']
         amount = request.form.get('amount')
         item_type = request.form.get('item_type')
+
+    @app.route('/foster_form')
+    def foster_form():
+        return render_template("foster_form.html")
         
         # Logic to handle the donation based on type
         if donation_type == 'money':
