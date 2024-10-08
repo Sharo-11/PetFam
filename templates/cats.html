@@ -1,78 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cat Compatibility Form | PetFam</title>
-    <link rel="stylesheet" href="../static/styles/cat.css">
+    <title>Cats for Adoption</title>
+    <link rel="stylesheet" href="../static/styles/cats.css">
 </head>
 <body>
     <header>
         <div class="header-content">
+            <div class="logo">
+                <img src="../static/images/logo.png" alt="Logo"> 
+            </div>
+            <h1 class="site-title">Cat Adoption</h1>
             <nav>
                 <ul>
-                    <li><a href="/adopt">Adopt</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="/community">Community</a></li>
                     <li><a href="/donation">Donation</a></li>
                     <li><a href="/contact">Contact</a></li>
+                    <li><a href="/about">About Us</a></li>
                 </ul>
             </nav>
-            <h1 class="site-title">PetFam</h1>
         </div>
-    </header>  
+    </header>
     <main>
-        <section class="compatibility-form">
-            <h2>Find Your Perfect Cat</h2>
-            <form action="#" method="post">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
+        </div>
+        <div class="pet-categories">
+            <a href="/adopt/cats"><button class="active">CATS</button></a>
+        </div>
+        <div class="pet-cards">
+            <div id="cat-cards-container">
+                <!-- Bella Cat Card -->
+                <div class="pet-card">
+                    <img src="../static/images/cat1.png" alt="Bella Cat">
+                    <div class="pet-info">
+                        <h3>BELLA</h3>
+                        <p>Domestic Cat</p>
+                        <p>2 years old</p>
+                        <p>Distance 3.0km</p>
+                        <div class="pet-details">
+                            <span>Breed: Domestic Shorthair</span>
+                            <span>Sex: Female</span>
+                            <span>Age: 2 years old</span>
+                            <span>Weight: 10 pounds</span>
+                            <button class="about-btn" data-target="#modal-bella">About</button>
+                        </div>
+                        <div id="modal-bella" class="pet-details-modal">
+                            <div class="pet-details-modal-content">
+                                <h2>BELLA</h2>
+                                <p>Bella is a playful cat who loves attention. She enjoys sitting on laps and playing with toys.</p>
+                                <button>Adoption</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <label for="living-space">Living Space:</label>
-                <select id="living-space" name="living-space" required>
-                    <option value="apartment">Apartment</option>
-                    <option value="house">House with Yard</option>
-                    <option value="farm">Farm or Large Property</option>
-                </select>
+                <!-- Oliver Cat Card -->
+                <div class="pet-card">
+                    <img src="../static/images/cat2.png" alt="Oliver Cat">
+                    <div class="pet-info">
+                        <h3>OLIVER</h3>
+                        <p>Domestic Cat</p>
+                        <p>1.5 years old</p>
+                        <p>Distance 4.0km</p>
+                        <div class="pet-details">
+                            <span>Breed: Persian</span>
+                            <span>Sex: Male</span>
+                            <span>Age: 1.5 years old</span>
+                            <span>Weight: 12 pounds</span>
+                            <button class="about-btn" data-target="#modal-oliver">About</button>
+                        </div>
+                        <div id="modal-oliver" class="pet-details-modal">
+                            <div class="pet-details-modal-content">
+                                <h2>OLIVER</h2>
+                                <p>Oliver is a calm and affectionate cat. He enjoys lounging around and getting petted.</p>
+                                <button>Adoption</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <label for="activity-level">Activity Level:</label>
-                <select id="activity-level" name="activity-level" required>
-                    <option value="low">Low (e.g., Calm Environment)</option>
-                    <option value="medium">Medium (e.g., Interactive Play)</option>
-                    <option value="high">High (e.g., Frequent Interaction)</option>
-                </select>
+                <!-- Lucy Cat Card -->
+                <div class="pet-card">
+                    <img src="../static/images/cat3.png" alt="Lucy Cat">
+                    <div class="pet-info">
+                        <h3>LUCY</h3>
+                        <p>Domestic Cat</p>
+                        <p>3 years old</p>
+                        <p>Distance 2.5km</p>
+                        <div class="pet-details">
+                            <span>Breed: Maine Coon</span>
+                            <span>Sex: Female</span>
+                            <span>Age: 3 years old</span>
+                            <span>Weight: 15 pounds</span>
+                            <button class="about-btn" data-target="#modal-lucy">About</button>
+                        </div>
+                        <div id="modal-lucy" class="pet-details-modal">
+                            <div class="pet-details-modal-content">
+                                <h2>LUCY</h2>
+                                <p>Lucy is friendly and loves to play. She gets along well with other pets.</p>
+                                <button>Adoption</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <label for="allergies">Do you have any allergies to cats?</label>
-                <select id="allergies" name="allergies" required>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
-
-                <label for="children">Do you have children?</label>
-                <select id="children" name="children" required>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
-
-                <label for="experience">Do you have previous experience with cats?</label>
-                <select id="experience" name="experience" required>
-                    <option value="novice">Novice</option>
-                    <option value="intermediate">Intermediate</option>
-                    <option value="experienced">Experienced</option>
-                </select>
-
-                <label for="cat-size">Preferred Cat Size:</label>
-                <select id="cat-size" name="cat-size" required>
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
-                </select>
-
-                <button type="submit">Find My Cat</button>
-            </form>
-        </section>
+                <!-- Max Cat Card -->
+                <div class="pet-card">
+                    <img src="../static/images/cat4.png" alt="Max Cat">
+                    <div class="pet-info">
+                        <h3>MAX</h3>
+                        <p>Domestic Cat</p>
+                        <p>2 years old</p>
+                        <p>Distance 3.5km</p>
+                        <div class="pet-details">
+                            <span>Breed: Siamese</span>
+                            <span>Sex: Male</span>
+                            <span>Age: 2 years old</span>
+                            <span>Weight: 9 pounds</span>
+                            <button class="about-btn" data-target="#modal-max">About</button>
+                        </div>
+                        <div id="modal-max" class="pet-details-modal">
+                            <div class="pet-details-modal-content">
+                                <h2>MAX</h2>
+                                <p>Max is an energetic cat who loves to chase after toys and interact with people.</p>
+                                <button>Adoption</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
-        <p>&copy; 2024 PetFam. All rights reserved.</p>
+        <p>&copy; Pet Adoption 2024. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var aboutButtons = document.querySelectorAll('.about-btn');
+            
+            aboutButtons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    var targetModal = document.querySelector(button.getAttribute('data-target'));
+                    targetModal.style.display = 'flex'; // Show the modal
+                });
+            });
+
+            var modals = document.querySelectorAll('.pet-details-modal');
+            
+            modals.forEach(function(modal) {
+                modal.addEventListener('click', function(event) {
+                    if (event.target === modal) {
+                        modal.style.display = 'none'; // Hide the modal when clicking outside the content
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
