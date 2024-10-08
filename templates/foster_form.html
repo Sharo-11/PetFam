@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/foster_form.css">
+    <title>Foster a Pet Form</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="../static/images/logo.png" alt="PetFam Logo">
+            </div>
+            <h1 class="site-title">PetFam</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/foster">Foster</a></li>
+                    <li><a href="/donation">Donation</a></li>
+                    <li><a href="/community">Community</a></li>
+                    <li><a href="/appointment">Appointment</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/about">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h2>Foster a Pet</h2>
+        <form id="foster-form">
+            <label for="petName">Pet Name:</label>
+            <input type="text" id="petName" name="petName" required>
+            
+            <label for="fosterDuration">Foster Duration:</label>
+            <input type="text" id="fosterDuration" name="fosterDuration" required placeholder="e.g., 2 weeks">
+
+            <label for="petDetails">Details about the Pet:</label>
+            <textarea id="petDetails" name="petDetails" required></textarea>
+
+            <button type="submit">Submit for Verification</button>
+            <button type="button" onclick="cancel()">Cancel</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2024 PetFam. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('foster-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Here you can add your verification logic
+            const petName = document.getElementById('petName').value;
+            const fosterDuration = document.getElementById('fosterDuration').value;
+            const petDetails = document.getElementById('petDetails').value;
+
+            // Example verification logic (you can customize this)
+            if (petName && fosterDuration && petDetails) {
+                alert('Your application has been submitted for verification!');
+                // Redirect or clear form
+                this.reset();
+            } else {
+                alert('Please fill in all fields!');
+            }
+        });
+
+        function cancel() {
+            if (confirm('Are you sure you want to cancel?')) {
+                window.location.href = '/foster'; // Redirect back to the foster page
+            }
+        }
+    </script>
+</body>
+</html>
