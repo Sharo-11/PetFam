@@ -1,106 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rabbits for Adoption</title>
-    <link rel="stylesheet" href="../static/styles/test.css"> <!-- Assuming you want to use the same CSS file -->
+    <link rel="stylesheet" href="../static/styles/rabbit.css">
 </head>
 <body>
     <header>
-        <h1>Rabbits for Adoption</h1>
+        <div class="header-content">
+            <div class="logo">
+                <img src="../static/images/logo.png" alt="Logo"> 
+            </div>
+            <h1 class="site-title">Rabbit Adoption</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/community">Community</a></li>
+                    <li><a href="/donation">Donation</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/about">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-
     <main>
-        <section class="service-cards">
-            <!-- Rabbit 1 -->
-            <div class="card">
-                <img src="../static/images/rabbit1.jpg" alt="Flopsy Angora">
-                <div class="pet-info">
-                    <h3>FLOPSY</h3>
-                    <p>Angora Rabbit</p>
-                    <p>2 years old</p>
-                    <p>Distance: 1.0km</p>
-                    <div class="pet-details">
-                        <span>Breed: Angora</span>
-                        <span>Sex: Female</span>
-                        <span>Age: 2 years old</span>
-                        <span>Weight: 5 pounds</span>
+        <div class="pet-categories">
+            <a href="/adopt/rabbits"><button class="active">RABBITS</button></a>
+        </div>
+        <div class="pet-cards">
+            <div id="rabbit-cards-container">
+                <!-- Fluffy Rabbit Card -->
+                <div class="pet-card">
+                    <img src="../static/images/rabbit1.jpg" alt="Fluffy Rabbit">
+                    <div class="pet-info">
+                        <h3>FLUFFY</h3>
+                        <p>Angora Rabbit</p>
+                        <p>2 years old</p>
+                        <p>Distance 5.0km</p>
+                        <div class="pet-details">
+                            <span>Breed: Angora</span>
+                            <span>Sex: Female</span>
+                            <span>Age: 2 years old</span>
+                            <span>Weight: 4 pounds</span>
+                            <button class="about-btn" data-target="#modal-fluffy">About</button>
+                        </div>
+                        <div id="modal-fluffy" class="pet-details-modal">
+                            <div class="pet-details-modal-content">
+                                <h2>FLUFFY</h2>
+                                <p>Fluffy is a sweet and gentle Angora rabbit who loves to cuddle.</p>
+                                <button>Adoption</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="card-content">
-                    <p>Flopsy is a fluffy Angora rabbit who loves to be pampered. She has a calm demeanor and enjoys being around people.</p>
-                    <button class="adopt-button">Adopt</button>
-                </div>
-            </div>
 
-            <!-- Rabbit 2 -->
-            <div class="card">
-                <img src="../static/images/rabbit2.jpg" alt="Thumper Holland Lop">
-                <div class="pet-info">
-                    <h3>THUMPER</h3>
-                    <p>Holland Lop Rabbit</p>
-                    <p>1 year old</p>
-                    <p>Distance: 3.0km</p>
-                    <div class="pet-details">
-                        <span>Breed: Holland Lop</span>
-                        <span>Sex: Male</span>
-                        <span>Age: 1 year old</span>
-                        <span>Weight: 4 pounds</span>
+                <!-- Snowy Rabbit Card -->
+                <div class="pet-card">
+                    <img src="../static/images/rabbit2.jpg" alt="Snowy Rabbit">
+                    <div class="pet-info">
+                        <h3>SNOWY</h3>
+                        <p>White Rabbit</p>
+                        <p>1 year old</p>
+                        <p>Distance 4.5km</p>
+                        <div class="pet-details">
+                            <span>Breed: White</span>
+                            <span>Sex: Male</span>
+                            <span>Age: 1 year old</span>
+                            <span>Weight: 3 pounds</span>
+                            <button class="about-btn" data-target="#modal-snowy">About</button>
+                        </div>
+                        <div id="modal-snowy" class="pet-details-modal">
+                            <div class="pet-details-modal-content">
+                                <h2>SNOWY</h2>
+                                <p>Snowy is a playful white rabbit who loves to hop around and explore.</p>
+                                <button>Adoption</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="card-content">
-                    <p>Thumper is an energetic Holland Lop who loves to hop around and play. He is curious and enjoys exploring new places.</p>
-                    <button class="adopt-button">Adopt</button>
-                </div>
-            </div>
 
-            <!-- Rabbit 3 -->
-            <div class="card">
-                <img src="../static/images/rabbit3.jpg" alt="Snowball Dwarf">
-                <div class="pet-info">
-                    <h3>SNOWBALL</h3>
-                    <p>Dwarf Rabbit</p>
-                    <p>3 years old</p>
-                    <p>Distance: 5.0km</p>
-                    <div class="pet-details">
-                        <span>Breed: Dwarf</span>
-                        <span>Sex: Male</span>
-                        <span>Age: 3 years old</span>
-                        <span>Weight: 3 pounds</span>
+                <!-- Bun Bun Rabbit Card -->
+                <div class="pet-card">
+                    <img src="../static/images/rabbit3.jpg" alt="Bun Bun Rabbit">
+                    <div class="pet-info">
+                        <h3>BUN BUN</h3>
+                        <p>Holland Lop</p>
+                        <p>3 years old</p>
+                        <p>Distance 3.0km</p>
+                        <div class="pet-details">
+                            <span>Breed: Holland Lop</span>
+                            <span>Sex: Female</span>
+                            <span>Age: 3 years old</span>
+                            <span>Weight: 3.5 pounds</span>
+                            <button class="about-btn" data-target="#modal-bunbun">About</button>
+                        </div>
+                        <div id="modal-bunbun" class="pet-details-modal">
+                            <div class="pet-details-modal-content">
+                                <h2>BUN BUN</h2>
+                                <p>Bun Bun is a loving Holland Lop who enjoys being around people.</p>
+                                <button>Adoption</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="card-content">
-                    <p>Snowball is a small Dwarf rabbit who's very affectionate. He loves to snuggle. His playful nature makes him a delightful companion.</p>
-                    <button class="adopt-button">Adopt</button>
-                </div>
-            </div>
 
-            <!-- Rabbit 4 -->
-            <div class="card">
-                <img src="../static/images/rabbit4.jpg" alt="Cinnamon Rex">
-                <div class="pet-info">
-                    <h3>CINNAMON</h3>
-                    <p>Rex Rabbit</p>
-                    <p>4 years old</p>
-                    <p>Distance: 2.0km</p>
-                    <div class="pet-details">
-                        <span>Breed: Rex</span>
-                        <span>Sex: Female</span>
-                        <span>Age: 4 years old</span>
-                        <span>Weight: 6 pounds</span>
+                <!-- Thumper Rabbit Card -->
+                <div class="pet-card">
+                    <img src="../static/images/rabbit4.jpg" alt="Thumper Rabbit">
+                    <div class="pet-info">
+                        <h3>THUMPER</h3>
+                        <p>Netherland Dwarf</p>
+                        <p>1.5 years old</p>
+                        <p>Distance 2.0km</p>
+                        <div class="pet-details">
+                            <span>Breed: Netherland Dwarf</span>
+                            <span>Sex: Male</span>
+                            <span>Age: 1.5 years old</span>
+                            <span>Weight: 2 pounds</span>
+                            <button class="about-btn" data-target="#modal-thumper">About</button>
+                        </div>
+                        <div id="modal-thumper" class="pet-details-modal">
+                            <div class="pet-details-modal-content">
+                                <h2>THUMPER</h2>
+                                <p>Thumper is an energetic Netherland Dwarf who loves to run and play.</p>
+                                <button>Adoption</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="card-content">
-                    <p>Cinnamon is a friendly Rex rabbit with a soft coat. She enjoys being petted & is great with kids. Her playful nature makes her a perfect companion.</p>
-                    <button class="adopt-button">Adopt</button>
-                </div>
             </div>
-        </section>
+        </div>
     </main>
-
     <footer>
-        <p>&copy; 2024 Rabbit Adoption Center</p>
+        <p>&copy; Pet Adoption 2024. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var aboutButtons = document.querySelectorAll('.about-btn');
+            
+            aboutButtons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    var targetModal = document.querySelector(button.getAttribute('data-target'));
+                    targetModal.style.display = 'flex'; // Show the modal
+                });
+            });
+
+            var modals = document.querySelectorAll('.pet-details-modal');
+            
+            modals.forEach(function(modal) {
+                modal.addEventListener('click', function(event) {
+                    if (event.target === modal) {
+                        modal.style.display = 'none'; // Hide the modal when clicking outside the content
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
