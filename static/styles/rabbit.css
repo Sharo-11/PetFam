@@ -1,133 +1,239 @@
-/* General styles for the header */
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #f9eed9, #f0e4b1); /* Light gradient background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
 header {
-    background-color: #d1b89d;
-    padding: 20px 0;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    position: relative;
+    background-color: #5a3a1a; /* Seal Brown */
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
 .header-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 10%;
+    justify-content: space-between; /* Space between logo and nav */
+    padding: 0 20px;
 }
 
-h1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 20px;
-    padding: 0;
+.logo img {
+    height: 50px; /* Adjust logo size */
 }
 
-nav {
+h1.site-title {
     margin: 0;
+    font-size: 2em; /* Larger font size */
+    font-weight: bold;
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1px; /* Slightly spaced letters */
 }
 
+/* Navigation Styles */
 nav ul {
-    display: flex;
     list-style: none;
     padding: 0;
-    gap: 30px;
     margin: 0;
+    display: flex; /* Flexbox for horizontal layout */
 }
 
 nav ul li {
-    position: relative;
+    margin: 0 15px; /* Spacing between nav items */
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #4f3c31;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 8px 0;
-    transition: color 0.3s, transform 0.3s, border-bottom 0.3s;
-    border-bottom: 3px solid transparent;
-    letter-spacing: 0.5px;
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
 }
 
-nav ul li a:hover {
-    color: #6f4f28;
-    transform: translateY(-3px);
-    border-bottom: 3px solid #6f4f28;
+/* Main Content Styles */
+main {
+    flex: 1;
+    padding: 20px;
+    overflow: auto; /* Allow main content to scroll if necessary */
 }
 
-.site-title {
-    font-size: 40px;
-    color: #4f3c31;
-    margin: 0;
-    margin-left: 20px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    transition: color 0.3s, transform 0.3s;
-    position: relative;
+/* Search Bar Styles */
+.search-bar {
+    display: flex;
+    justify-content: center; /* Center search bar */
+    margin-bottom: 20px; /* Space below search bar */
 }
 
-.site-title::before {
-    content: "";
-    position: absolute;
-    left: -30px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 25px;
-    height: 25px;
-    background: radial-gradient(circle, #6f4f28 50%, transparent 50%);
-    border-radius: 50%;
-}
-
-/* Styles for the form */
-.compatibility-form {
-    background-color: #f2e6d9;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    max-width: 600px;
-    margin: 40px auto;
-}
-
-.compatibility-form h2 {
-    text-align: center;
-    color: #4f3c31;
-    margin-bottom: 30px;
-}
-
-.compatibility-form label {
-    display: block;
-    margin-bottom: 10px;
-    color: #4f3c31;
-    font-weight: 600;
-}
-
-.compatibility-form input,
-.compatibility-form select {
-    width: 100%;
+.search-bar input {
     padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #d1b89d;
-    border-radius: 5px;
-    background-color: #ffffff;
-    color: #4f3c31;
-    font-size: 16px;
+    width: 300px; /* Width of input */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 5px; /* Rounded corners */
 }
 
-.compatibility-form button {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    background-color: #4f3c31;
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: 600;
+.search-bar button {
+    padding: 10px 15px;
+    margin-left: 10px; /* Space between input and button */
+    background-color: #987f50; /* Dark Khaki */
+    color: white;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition */
 }
 
-.compatibility-form button:hover {
-    background-color: #6f4f28;
-    transform: translateY(-3px);
+.search-bar button:hover {
+    background-color: #5a3a1a; /* Darker shade on hover */
+}
+
+/* Pet Categories Styles */
+.pet-categories {
+    display: flex;
+    justify-content: center; /* Center buttons */
+    margin-bottom: 20px; /* Space below categories */
+}
+
+.pet-categories button {
+    background-color: #987f50; /* Dark Khaki */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 10px; /* Spacing between buttons */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.pet-categories button.active {
+    background-color: #5a3a1a; /* Darker shade for active category */
+}
+
+/* Pet Cards Styles */
+.pet-cards {
+    display: flex; /* Use flexbox for horizontal alignment */
+    flex-wrap: wrap; /* Allow cards to wrap onto the next line */
+    justify-content: center; /* Center cards in the container */
+    gap: 20px; /* Spacing between cards */
+    padding: 20px; /* Padding around the card container */
+}
+
+/* Card Styles */
+.pet-card {
+    background-color: #f9eed9; /* Light background */
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow for more depth */
+    width: 300px; /* Fixed width for the cards */
+    overflow: hidden; /* Hide overflow */
+    text-align: center; /* Center text */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.pet-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* More intense shadow */
+}
+
+.pet-card img {
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Cover image */
+    border-bottom: 4px solid #987f50; /* Dark Tan */
+    transition: filter 0.3s; /* Smooth filter transition */
+}
+
+.pet-card:hover img {
+    filter: brightness(1.1); /* Slight brightness increase on hover */
+}
+
+.pet-info {
+    padding: 15px; /* Padding inside card */
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    border-top: 4px solid #987f50; /* Dark Tan */
+}
+
+.pet-info h3 {
+    margin: 0; /* Remove default margin */
+    font-size: 1.5em; /* Larger font size */
+    font-weight: bold; /* Bold title */
+    color: #333; /* Dark text color */
+}
+
+.pet-info p {
+    margin: 10px 0; /* Margin for spacing */
+    font-size: 1em; /* Standard font size */
+    color: #666; /* Lighter text color */
+}
+
+/* Modal Styles */
+.pet-details-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    justify-content: center; /* Center content */
+    align-items: center; /* Center content */
+}
+
+.pet-details-modal-content {
+    background: white; /* White background */
+    padding: 20px; /* Padding inside modal */
+    border-radius: 10px; /* Rounded corners */
+    width: 80%; /* Width of modal */
+    max-width: 500px; /* Max width */
+    position: relative; /* For positioning close button */
+}
+
+/* Button Styles */
+.about-btn {
+    background-color: #5a3a1a; /* Seal Brown */
+    color: white; /* Text color */
+    padding: 10px 15px; /* Padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.about-btn:hover {
+    background-color: #987f50; /* Dark Tan on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #5a3a1a; /* Seal Brown */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    padding: 15px; /* Padding */
+    width: 100%; /* Full width */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .pet-card {
+        width: 45%; /* Adjust card width for smaller screens */
+    }
+
+    .search-bar input {
+        width: 80%; /* Full width for small screens */
+    }
+
+    .pet-categories button {
+        width: 100%; /* Full width for small buttons */
+        margin: 5px 0; /* Margin for spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .pet-card {
+        width: 100%; /* Full width for very small screens */
+    }
 }
