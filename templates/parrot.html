@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dogs for Adoption</title>
-    <link rel="stylesheet" href="../static/styles/adopt.css">
+    <title>Parrots for Adoption</title>
+    <link rel="stylesheet" href="../static/styles/parrot.css">
 </head>
 <body>
     <header>
@@ -10,7 +10,7 @@
             <div class="logo">
                 <img src="../static/images/logo.png" alt="Logo"> 
             </div>
-            <h1 class="site-title">Dog Adoption</h1>
+            <h1 class="site-title">Parrot Adoption</h1>
             <nav>
                 <ul>
                     <li><a href="/">Home</a></li>
@@ -23,185 +23,106 @@
         </div>
     </header>
     <main>
-        <div class="search-bar">
-            <input type="text" placeholder="Search pet to adopt">
-            <button>Search</button>
-        </div>
         <div class="pet-categories">
-            <a href="/adopt/dogs"><button class="active">DOGS</button></a>
-            <a href="/adopt/cats"><button>CATS</button></a>
-            <a href="/adopt/parrot"><button>PARROTS</button></a>
-            <a href="/adopt/rabbit"><button>RABBITS</button></a>
+            <a href="/adopt/parrots"><button class="active">PARROTS</button></a>
         </div>
         <div class="pet-cards">
-            <!-- Dog Cards Container -->
-            <div id="dog-cards-container">
-                <!-- Peter Beagle Card -->
+            <div id="parrot-cards-container">
+                <!-- Kiwi Parrot Card -->
                 <div class="pet-card">
-                    <img src="../static/images/bird1parrot.png" alt="Peter Beagle">
-                    <div class="pet-info">
-                        <h3>PETER</h3>
-                        <p>Beagle Dog</p>
-                        <p>1.5 years old</p>
-                        <p>Distance 2.5km</p>
-                        <div class="pet-details">
-                            <span>Breed: Beagle</span>
-                            <span>Sex: Male</span>
-                            <span>Age: 1.5 years old</span>
-                            <span>Weight: 20 pounds</span>
-                            <button class="about-btn">About</button>
-                        </div>
-                        <div class="pet-details-modal">
-                            <div class="pet-details-modal-content">
-                                <h2>PETER</h2>
-                                <p>Peter is super friendly and needs love and attention. He loves to play and will make a great companion for children and does well with cats and other dogs.</p>
-                                <button>Adoption</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-<<<<<<< HEAD
-                <!-- Kiwi Cockatoo Card -->
-                <div class="pet-card">
-                    <img src="../static/images/parrot2.jpg" alt="Kiwi Cockatoo">
+                    <img src="../static/images/parrot1.jpg" alt="Kiwi Parrot">
                     <div class="pet-info">
                         <h3>KIWI</h3>
-                        <p>Cockatoo Parrot</p>
-                        <p>3 years old</p>
-                        <p>Distance 4.5km</p>
+                        <p>Macaw Parrot</p>
+                        <p>2 years old</p>
+                        <p>Distance 5.0km</p>
                         <div class="pet-details">
-                            <span>Breed: Cockatoo</span>
-                            <span>Sex: Female</span>
-                            <span>Age: 3 years old</span>
-                            <span>Weight: 2 pounds</span>
-                            <button class="about-btn" data-modal="modal-kiwi">About</button>
+                            <span>Breed: Macaw</span>
+                            <span>Sex: Male</span>
+                            <span>Age: 2 years old</span>
+                            <span>Weight: 1.5 pounds</span>
+                            <button class="about-btn" data-target="#modal-kiwi">About</button>
                         </div>
                         <div id="modal-kiwi" class="pet-details-modal">
                             <div class="pet-details-modal-content">
                                 <h2>KIWI</h2>
-                                <p>Kiwi is a charming Cockatoo with a playful nature. She enjoys interacting with people and other pets and loves to dance.</p>
-                                <button class="adopt-btn">Adoption</button>
-=======
-                <!-- Carla Indie Card -->
+                                <p>Kiwi is a friendly and social macaw who loves to interact with people.</p>
+                                <button>Adoption</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rio Parrot Card -->
                 <div class="pet-card">
-                    <img src="../static/images/dog2.png" alt="Carla Indie">
+                    <img src="../static/images/parrot2.jpg" alt="Rio Parrot">
                     <div class="pet-info">
-                        <h3>CARLA</h3>
-                        <p>Indie Dog</p>
-                        <p>1 year old</p>
+                        <h3>RIO</h3>
+                        <p>African Grey Parrot</p>
+                        <p>3 years old</p>
                         <p>Distance 4.5km</p>
                         <div class="pet-details">
-                            <span>Breed: Indie</span>
+                            <span>Breed: African Grey</span>
                             <span>Sex: Female</span>
-                            <span>Age: 1 year old</span>
-                            <span>Weight: 10 pounds</span>
-                            <button class="about-btn">About</button>
+                            <span>Age: 3 years old</span>
+                            <span>Weight: 1.8 pounds</span>
+                            <button class="about-btn" data-target="#modal-rio">About</button>
                         </div>
-                        <div class="pet-details-modal">
+                        <div id="modal-rio" class="pet-details-modal">
                             <div class="pet-details-modal-content">
-                                <h2>CARLA</h2>
-                                <p>Carla is a playful and energetic Indie. She loves to cuddle and is very affectionate, great with children and other pets.</p>
+                                <h2>RIO</h2>
+                                <p>Rio is a smart and chatty African Grey who enjoys puzzles and learning tricks.</p>
                                 <button>Adoption</button>
->>>>>>> 7b29619a1c1f1e353fa80e6f9121afd553eff0a4
                             </div>
                         </div>
                     </div>
                 </div>
 
-<<<<<<< HEAD
-                <!-- Mango Amazon Card -->
+                <!-- Sunny Parrot Card -->
                 <div class="pet-card">
-                    <img src="../static/images/parrot1.jpg" alt="Mango Amazon">
+                    <img src="../static/images/parrot3.jpg" alt="Sunny Parrot">
                     <div class="pet-info">
-                        <h3>MANGO</h3>
-                        <p>Amazon Parrot</p>
-                        <p>7 years old</p>
-                        <p>Distance 6.0km</p>
+                        <h3>SUNNY</h3>
+                        <p>Sun Conure</p>
+                        <p>1.5 years old</p>
+                        <p>Distance 3.0km</p>
                         <div class="pet-details">
-                            <span>Breed: Amazon</span>
+                            <span>Breed: Sun Conure</span>
                             <span>Sex: Male</span>
-                            <span>Age: 7 years old</span>
-                            <span>Weight: 2.5 pounds</span>
-                            <button class="about-btn" data-modal="modal-mango">About</button>
+                            <span>Age: 1.5 years old</span>
+                            <span>Weight: 1 pound</span>
+                            <button class="about-btn" data-target="#modal-sunny">About</button>
                         </div>
-                        <div id="modal-mango" class="pet-details-modal">
+                        <div id="modal-sunny" class="pet-details-modal">
                             <div class="pet-details-modal-content">
-                                <h2>MANGO</h2>
-                                <p>Mango is a wise Amazon parrot who loves to socialize. He has a large vocabulary and enjoys learning new tricks.</p>
-                                <button class="adopt-btn">Adoption</button>
+                                <h2>SUNNY</h2>
+                                <p>Sunny is a vibrant and playful parrot who loves to sing and dance.</p>
+                                <button>Adoption</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Skittles Lovebird Card -->
+                <!-- Coco Parrot Card -->
                 <div class="pet-card">
-                    <img src="../static/images/lovebirds.jpg" alt="Skittles Lovebird">
+                    <img src="../static/images/parrot1.jpg" alt="Coco Parrot">
                     <div class="pet-info">
-                        <h3>SKITTLES</h3>
-                        <p>Lovebird Parrot</p>
+                        <h3>COCO</h3>
+                        <p>Lovebird</p>
                         <p>2 years old</p>
-                        <p>Distance 8.0km</p>
+                        <p>Distance 2.0km</p>
                         <div class="pet-details">
                             <span>Breed: Lovebird</span>
                             <span>Sex: Female</span>
                             <span>Age: 2 years old</span>
                             <span>Weight: 0.5 pounds</span>
-                            <button class="about-btn" data-modal="modal-skittles">About</button>
+                            <button class="about-btn" data-target="#modal-coco">About</button>
                         </div>
-                        <div id="modal-skittles" class="pet-details-modal">
+                        <div id="modal-coco" class="pet-details-modal">
                             <div class="pet-details-modal-content">
-                                <h2>SKITTLES</h2>
-                                <p>Skittles is a delightful Lovebird with a playful and affectionate nature. She loves interacting with people and is very social.</p>
-                                <button class="adopt-btn">Adoption</button>
-=======
-                <!-- Sara Beagle Card -->
-                <div class="pet-card">
-                    <img src="../static/images/dog3.png" alt="Sara Beagle">
-                    <div class="pet-info">
-                        <h3>SARA</h3>
-                        <p>Beagle Dog</p>
-                        <p>2 years old</p>
-                        <p>Distance 2.0km</p>
-                        <div class="pet-details">
-                            <span>Breed: Beagle</span>
-                            <span>Sex: Female</span>
-                            <span>Age: 2 years old</span>
-                            <span>Weight: 20 pounds</span>
-                            <button class="about-btn">About</button>
-                        </div>
-                        <div class="pet-details-modal">
-                            <div class="pet-details-modal-content">
-                                <h2>SARA</h2>
-                                <p>Sara is super friendly and needs love and attention. She loves to play and will make a great companion for children and does well with cats and other dogs.</p>
+                                <h2>COCO</h2>
+                                <p>Coco is a charming lovebird who enjoys cuddling and being around her humans.</p>
                                 <button>Adoption</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tom Beagle Card -->
-                <div class="pet-card">
-                    <img src="../static/images/dog4.png" alt="Tom Beagle">
-                    <div class="pet-info">
-                        <h3>TOM</h3>
-                        <p>Beagle Dog</p>
-                        <p>1.5 years old</p>
-                        <p>Distance 2.5km</p>
-                        <div class="pet-details">
-                            <span>Breed: Beagle</span>
-                            <span>Sex: Male</span>
-                            <span>Age: 1.5 years old</span>
-                            <span>Weight: 20 pounds</span>
-                            <button class="about-btn">About</button>
-                        </div>
-                        <div class="pet-details-modal">
-                            <div class="pet-details-modal-content">
-                                <h2>TOM</h2>
-                                <p>Tom is super friendly and needs love and attention. He loves to play and will make a great companion for children and does well with cats and other dogs.</p>
-                                <button>Adoption</button>
->>>>>>> 7b29619a1c1f1e353fa80e6f9121afd553eff0a4
                             </div>
                         </div>
                     </div>
@@ -212,29 +133,28 @@
     <footer>
         <p>&copy; Pet Adoption 2024. All rights reserved.</p>
     </footer>
-<<<<<<< HEAD
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const aboutBtns = document.querySelectorAll('.about-btn');
-            const modals = document.querySelectorAll('.pet-details-modal');
 
-            aboutBtns.forEach(button => {
-                button.addEventListener('click', () => {
-                    const modalId = button.getAttribute('data-modal');
-                    document.getElementById(modalId).style.display = 'flex';
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var aboutButtons = document.querySelectorAll('.about-btn');
+            
+            aboutButtons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    var targetModal = document.querySelector(button.getAttribute('data-target'));
+                    targetModal.style.display = 'flex'; // Show the modal
                 });
             });
 
-            modals.forEach(modal => {
-                modal.addEventListener('click', (e) => {
-                    if (e.target === modal) {
-                        modal.style.display = 'none';
+            var modals = document.querySelectorAll('.pet-details-modal');
+            
+            modals.forEach(function(modal) {
+                modal.addEventListener('click', function(event) {
+                    if (event.target === modal) {
+                        modal.style.display = 'none'; // Hide the modal when clicking outside the content
                     }
                 });
             });
         });
     </script>
-=======
->>>>>>> 7b29619a1c1f1e353fa80e6f9121afd553eff0a4
 </body>
 </html>
